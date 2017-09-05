@@ -9,7 +9,6 @@ set wildmenu
 set pastetoggle=<F10>
 set nu
 set relativenumber
-set guifont=Monaco:h14
 
 " tabs to spaces
 retab
@@ -19,6 +18,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'tpope/vim-surround'
+Plug 'severin-lemaignan/vim-minimap'
 
 " theme
 Plug 'hzchirs/vim-material'
@@ -31,7 +32,6 @@ call plug#end()
 syntax on
 set termguicolors
 colorscheme vim-material
-execute pathogen#infect()
 
 let g:jsx_ext_required = 0
 let g:ctrlp_working_path_mode = 'ca'
