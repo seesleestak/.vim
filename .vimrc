@@ -16,10 +16,7 @@ retab
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
-Plug 'vim-syntastic/syntastic'
-Plug 'vim-scripts/L9'
 Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'vim-scripts/FuzzyFinder'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
@@ -54,22 +51,5 @@ noremap <c-h> <c-w>h
 nmap <S-Enter> O<Esc>
 noremap : ;
 noremap ; :
-
-" Fuzzy finder mapping
-nmap ,f :FufFileWithCurrentBufferDir<CR>
-nmap ,b :FufBuffer<CR>
-nmap ,t :FufTaggedFile<CR>
-set backspace=indent,eol,start
-
-" Syntastic config
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
 filetype plugin indent on
