@@ -70,7 +70,7 @@ endif
 
 " Remappings
 map <F10> :set pastetoggle<CR>
-map qq :q<CR>
+map <leader>q :q<CR>
 noremap zz :update<CR>
 map <C-n> :NERDTreeToggle<CR>
 nmap <leader>n :NERDTreeFind<CR>
