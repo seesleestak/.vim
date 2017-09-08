@@ -10,6 +10,9 @@ set pastetoggle=<F10>
 set nu
 set relativenumber
 
+" System clipboard
+set clipboard=unnamed
+
 " tabs to spaces
 retab
 
@@ -18,6 +21,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
   Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/nerdcommenter'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'vim-airline/vim-airline'
   Plug 'mileszs/ack.vim'
@@ -28,6 +32,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-fugitive'
   Plug 'severin-lemaignan/vim-minimap'
 
   " theme
@@ -71,10 +76,10 @@ endif
 " Remappings
 map <F10> :set pastetoggle<CR>
 map <leader>q :q<CR>
-noremap zz :update<CR>
+noremap <leader>s :update<CR>
 map <C-n> :NERDTreeToggle<CR>
 nmap <leader>n :NERDTreeFind<CR>
-noremap <leader>f :Ack<space>
+noremap <leader>f :Ack!<space>
 noremap <c-j> <c-w>j
 noremap <c-k> <c-w>k
 noremap <c-l> <c-w>l
