@@ -1,4 +1,5 @@
 set tabstop=2
+set autoread
 set shiftwidth=2
 set softtabstop=2
 set smarttab
@@ -34,8 +35,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
   Plug 'severin-lemaignan/vim-minimap'
+  Plug 'Townk/vim-autoclose'
+  Plug 'vim-scripts/closetag.vim'
 
   " theme
+  Plug 'encody/nvim'
   Plug 'hzchirs/vim-material'
   Plug 'dunckr/vim-monokai-soda'
   Plug 'baines/vim-colorscheme-thaumaturge'
@@ -76,6 +80,7 @@ endif
 " Remappings
 map <F10> :set pastetoggle<CR>
 map <leader>q :q<CR>
+map <leader>gb :Gblame<CR>
 noremap <leader>s :update<CR>
 map <C-n> :NERDTreeToggle<CR>
 nmap <leader>n :NERDTreeFind<CR>
@@ -92,3 +97,4 @@ map  <C-h> :tabp<CR>
 set backspace=indent,eol,start
 
 filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
