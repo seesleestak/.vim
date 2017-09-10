@@ -36,13 +36,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
 
   " Core editor functionality
-  Plug 'Valloric/YouCompleteMe' 
   Plug 'tpope/vim-surround'
   Plug 'Townk/vim-autoclose'
   Plug 'vim-scripts/closetag.vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'danro/rename.vim'
+  Plug 'SirVer/ultisnips'
+  " Plug 'Valloric/YouCompleteMe'
 
   " Themes
   Plug 'encody/nvim'
@@ -62,12 +63,23 @@ let mapleader = ","
 let g:jsx_ext_required = 0
 let g:airline_powerline_fonts = 1
 
+" Change cursor for modes
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+let g:UltiSnipsJumpForwardTrigger='<c-b>'
+let g:UltiSnipsJumpBackwardTrigger='<c-z>'
+let g:UltiSnipsEditSplit="vertical"
+let g:ycm_key_list_select_completion=['<C-j>', '<Down>']
+let g:ycm_key_list_previous_completion=['<C-k>', '<Up>']
+let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
+
 " CtrlP config
 let g:ctrlp_working_path_mode = 'ca'
 let g:ctrlp_by_filename = 1
-let g:ctrlp_working_path_mode = 'src'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.yardoc\|node_modules\|coverage\|log\|tmp$',
+  \ 'dir':  '\.git$\|\.yardoc\|node_modules\|coverage\|lib\|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
 
