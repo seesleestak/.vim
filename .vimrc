@@ -10,6 +10,7 @@ set wildmenu
 set pastetoggle=<F10>
 set nu
 set relativenumber
+set backspace=indent,eol,start
 
 " System clipboard
 set clipboard=unnamed
@@ -43,7 +44,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'danro/rename.vim'
   Plug 'SirVer/ultisnips'
-  Plug 'Valloric/YouCompleteMe'
+  " Plug 'Valloric/YouCompleteMe'
 
   " Themes
   Plug 'encody/nvim'
@@ -63,17 +64,13 @@ let mapleader = ','
 let g:jsx_ext_required = 0
 let g:airline_powerline_fonts = 1
 
-" Change cursor for modes
-let &t_SI = '\<Esc>]50;CursorShape=1\x7'
-let &t_SR = '\<Esc>]50;CursorShape=2\x7'
-let &t_EI = '\<Esc>]50;CursorShape=0\x7'
-
 let g:UltiSnipsJumpForwardTrigger='<c-b>'
 let g:UltiSnipsJumpBackwardTrigger='<c-z>'
 let g:UltiSnipsEditSplit='vertical'
+let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
+
 let g:ycm_key_list_select_completion=['<C-j>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-k>', '<Up>']
-let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
 
 " CtrlP config
 let g:ctrlp_working_path_mode = 'ca'
@@ -98,6 +95,7 @@ if has('autocmd')
 endif
 
 " Remappings
+" ----------------------------
   map <F10> :set pastetoggle<CR>
   map <leader>q :q<CR>
   map <leader>r :Rename<space>
@@ -113,11 +111,11 @@ endif
   map <leader>gb :Gblame<CR>
   map <leader>gd :Gdiff<CR>
 
+  " NERDTree mappings
   map <C-n> :NERDTreeToggle<CR>
   nmap <leader>n :NERDTreeFind<CR>
-  noremap <leader>f :Ack!<space>
 
-" Conditionally allow backspace
-set backspace=indent,eol,start
+  noremap <leader>f :Ack!<space>
+" ----------------------------
 
 filetype plugin indent on
