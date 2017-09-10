@@ -58,6 +58,7 @@ colorscheme ayu
 let mapleader = ","
 let g:jsx_ext_required = 0
 let g:airline_powerline_fonts = 1
+let g:NERDSpaceDelims = 1
 
 " CtrlP config
 let g:ctrlp_working_path_mode = 'ca'
