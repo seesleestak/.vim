@@ -1,0 +1,46 @@
+snippet log "console.log('...', ...)" b
+console.log('$1 --- ', $1)
+endsnippet
+
+snippet sc "Stateless Component" b
+import React from 'react'
+import PropTypes from 'prop-types'
+
+const $1 = () => {
+  return (
+    <div>
+
+    </div>
+  )
+}
+
+$1.propTypes = {}
+$1.defaultProps = {}
+
+export default $1
+endsnippet
+
+snippet t "Component Test Structure" b
+import React from 'react'
+import { shallow } from 'enzyme'
+
+import $1 from $2
+
+describe('(Component) $1', function () {
+  it('Should be exported as a function', function () {
+    expect($1).to.be.a('function')
+  })
+})
+endsnippet
+
+snippet it "Test spec" b
+it('$1', function () {
+  $2
+})
+endsnippet
+
+snippet de "Test describe" b
+describe('$1', function () {
+	$2
+})
+endsnippet
