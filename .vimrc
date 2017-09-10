@@ -43,7 +43,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'danro/rename.vim'
   Plug 'SirVer/ultisnips'
-  " Plug 'Valloric/YouCompleteMe'
+  Plug 'Valloric/YouCompleteMe'
 
   " Themes
   Plug 'encody/nvim'
@@ -59,21 +59,21 @@ syntax on
 set termguicolors
 colorscheme ayu
 
-let mapleader = ","
+let mapleader = ','
 let g:jsx_ext_required = 0
 let g:airline_powerline_fonts = 1
 
 " Change cursor for modes
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+let &t_SI = '\<Esc>]50;CursorShape=1\x7'
+let &t_SR = '\<Esc>]50;CursorShape=2\x7'
+let &t_EI = '\<Esc>]50;CursorShape=0\x7'
 
 let g:UltiSnipsJumpForwardTrigger='<c-b>'
 let g:UltiSnipsJumpBackwardTrigger='<c-z>'
-let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsEditSplit='vertical'
 let g:ycm_key_list_select_completion=['<C-j>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-k>', '<Up>']
-let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
+let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
 
 " CtrlP config
 let g:ctrlp_working_path_mode = 'ca'
@@ -85,7 +85,7 @@ let g:ctrlp_custom_ignore = {
 
 " CtrlP auto cache clearing.
 function! SetupCtrlP()
-  if exists("g:loaded_ctrlp") && g:loaded_ctrlp
+  if exists('g:loaded_ctrlp') && g:loaded_ctrlp
     augroup CtrlPExtension
       autocmd!
       autocmd FocusGained  * CtrlPClearCache
@@ -93,7 +93,7 @@ function! SetupCtrlP()
     augroup END
   endif
 endfunction
-if has("autocmd")
+if has('autocmd')
   autocmd VimEnter * :call SetupCtrlP()
 endif
 
