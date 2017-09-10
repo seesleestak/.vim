@@ -14,31 +14,36 @@ set relativenumber
 " System clipboard
 set clipboard=unnamed
 
-" tabs to spaces
+" Tabs to spaces
 retab
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
-  Plug 'w0rp/ale'
+  " File management
   Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/nerdcommenter'
-  Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'vim-airline/vim-airline'
   Plug 'mileszs/ack.vim'
-  Plug 'vim-airline/vim-airline-themes'
-  Plug 'danro/rename.vim'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+  " Git
+  Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'
+
+  " JS syntax
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
+  Plug 'w0rp/ale'
+
+  " Core editor functionality
   Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-fugitive'
-  Plug 'severin-lemaignan/vim-minimap'
   Plug 'Townk/vim-autoclose'
   Plug 'vim-scripts/closetag.vim'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'danro/rename.vim'
 
-  " theme
+  " Themes
   Plug 'encody/nvim'
   Plug 'hzchirs/vim-material'
   Plug 'dunckr/vim-monokai-soda'
@@ -49,7 +54,7 @@ call plug#end()
 
 syntax on
 set termguicolors
-colorscheme vim-material
+colorscheme ayu
 let mapleader = ","
 let g:jsx_ext_required = 0
 let g:airline_powerline_fonts = 1
@@ -97,4 +102,3 @@ map  <C-h> :tabp<CR>
 set backspace=indent,eol,start
 
 filetype plugin indent on
-set omnifunc=syntaxcomplete#Complete
