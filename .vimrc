@@ -36,6 +36,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
 
   " Core editor functionality
+  Plug 'Valloric/YouCompleteMe' 
   Plug 'tpope/vim-surround'
   Plug 'Townk/vim-autoclose'
   Plug 'vim-scripts/closetag.vim'
@@ -88,22 +89,21 @@ endif
   map <F10> :set pastetoggle<CR>
   map <leader>q :q<CR>
   map <leader>r :Rename<space>
+  noremap <leader>s :update<CR>
+  noremap <c-j> <c-w>j
+  noremap <c-k> <c-w>k
+  noremap <c-l> <c-w>l
+  noremap <c-h> <c-w>h
+  map  <C-l> :tabn<CR>
+  map  <C-h> :tabp<CR>
 
   " Fugitive mappings
   map <leader>gb :Gblame<CR>
   map <leader>gd :Gdiff<CR>
 
-  noremap <leader>s :update<CR>
   map <C-n> :NERDTreeToggle<CR>
   nmap <leader>n :NERDTreeFind<CR>
   noremap <leader>f :Ack!<space>
-  noremap <c-j> <c-w>j
-  noremap <c-k> <c-w>k
-  noremap <c-l> <c-w>l
-  noremap <c-h> <c-w>h
-  nmap <S-Enter> O<Esc>
-  map  <C-l> :tabn<CR>
-  map  <C-h> :tabp<CR>
 
 " Conditionally allow backspace
 set backspace=indent,eol,start
