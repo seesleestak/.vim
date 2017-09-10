@@ -52,13 +52,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
+" Syntax Highlighting
 syntax on
 set termguicolors
 colorscheme ayu
+
 let mapleader = ","
 let g:jsx_ext_required = 0
 let g:airline_powerline_fonts = 1
-let g:NERDSpaceDelims = 1
 
 " CtrlP config
 let g:ctrlp_working_path_mode = 'ca'
@@ -84,20 +85,25 @@ if has("autocmd")
 endif
 
 " Remappings
-map <F10> :set pastetoggle<CR>
-map <leader>q :q<CR>
-map <leader>gb :Gblame<CR>
-noremap <leader>s :update<CR>
-map <C-n> :NERDTreeToggle<CR>
-nmap <leader>n :NERDTreeFind<CR>
-noremap <leader>f :Ack!<space>
-noremap <c-j> <c-w>j
-noremap <c-k> <c-w>k
-noremap <c-l> <c-w>l
-noremap <c-h> <c-w>h
-nmap <S-Enter> O<Esc>
-map  <C-l> :tabn<CR>
-map  <C-h> :tabp<CR>
+  map <F10> :set pastetoggle<CR>
+  map <leader>q :q<CR>
+  map <leader>r :Rename<space>
+
+  " Fugitive mappings
+  map <leader>gb :Gblame<CR>
+  map <leader>gd :Gdiff<CR>
+
+  noremap <leader>s :update<CR>
+  map <C-n> :NERDTreeToggle<CR>
+  nmap <leader>n :NERDTreeFind<CR>
+  noremap <leader>f :Ack!<space>
+  noremap <c-j> <c-w>j
+  noremap <c-k> <c-w>k
+  noremap <c-l> <c-w>l
+  noremap <c-h> <c-w>h
+  nmap <S-Enter> O<Esc>
+  map  <C-l> :tabn<CR>
+  map  <C-h> :tabp<CR>
 
 " Conditionally allow backspace
 set backspace=indent,eol,start
