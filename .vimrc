@@ -11,6 +11,7 @@ set pastetoggle=<F10>
 set nu
 set relativenumber
 set backspace=indent,eol,start
+set mouse=n
 
 " System clipboard
 set clipboard=unnamed
@@ -20,6 +21,17 @@ retab
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
+  " Core editor functionality
+  Plug 'tpope/vim-surround'
+  Plug 'Townk/vim-autoclose'
+  Plug 'vim-scripts/closetag.vim'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'danro/rename.vim'
+  Plug 'SirVer/ultisnips'
+  Plug 'Valloric/MatchTagAlways'
+  " Plug 'Valloric/YouCompleteMe'
+ 
   " File management
   Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/nerdcommenter'
@@ -35,16 +47,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
   Plug 'w0rp/ale'
-
-  " Core editor functionality
-  Plug 'tpope/vim-surround'
-  Plug 'Townk/vim-autoclose'
-  Plug 'vim-scripts/closetag.vim'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-  Plug 'danro/rename.vim'
-  Plug 'SirVer/ultisnips'
-  " Plug 'Valloric/YouCompleteMe'
 
   " Themes
   Plug 'encody/nvim'
@@ -63,9 +65,10 @@ colorscheme ayu
 let mapleader = ','
 let g:jsx_ext_required = 0
 let g:airline_powerline_fonts = 1
+let g:NERDSpaceDelims = 1
 
-let g:UltiSnipsJumpForwardTrigger='<c-b>'
-let g:UltiSnipsJumpBackwardTrigger='<c-z>'
+let g:UltiSnipsJumpForwardTrigger='<c-i>'
+let g:UltiSnipsJumpBackwardTrigger='<c-o>'
 let g:UltiSnipsEditSplit='vertical'
 let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
 
