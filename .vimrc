@@ -75,6 +75,14 @@ let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
 let g:ycm_key_list_select_completion=['<C-j>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-k>', '<Up>']
 
+let g:mta_filetypes = {
+  \ 'javascript.jsx': 1,
+  \ 'html' : 1,
+  \ 'xhtml' : 1,
+  \ 'xml' : 1,
+  \ 'jinja' : 1,
+  \ }
+
 " CtrlP config
 let g:ctrlp_working_path_mode = 'ca'
 let g:ctrlp_by_filename = 1
