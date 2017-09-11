@@ -13,25 +13,31 @@ set relativenumber
 set backspace=indent,eol,start
 set mouse=n
 
+" Don't backup
+set nobackup
+set noswapfile
+
 " System clipboard
 set clipboard=unnamed
 
 " Tabs to spaces
 retab
 
+" Remove trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+
 " vim-plug
 call plug#begin('~/.vim/plugged')
   " Core editor functionality
   Plug 'tpope/vim-surround'
-  Plug 'Townk/vim-autoclose'
-  Plug 'vim-scripts/closetag.vim'
+  Plug 'jiangmiao/auto-pairs'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'danro/rename.vim'
   Plug 'SirVer/ultisnips'
   Plug 'Valloric/MatchTagAlways'
   " Plug 'Valloric/YouCompleteMe'
- 
+
   " File management
   Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/nerdcommenter'
@@ -67,13 +73,14 @@ let g:jsx_ext_required = 0
 let g:airline_powerline_fonts = 1
 let g:NERDSpaceDelims = 1
 
-let g:UltiSnipsJumpForwardTrigger='<c-i>'
-let g:UltiSnipsJumpBackwardTrigger='<c-o>'
-let g:UltiSnipsEditSplit='vertical'
-let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
+let g:UltiSnipsJumpForwardTrigger = '<c-i>'
+let g:UltiSnipsJumpBackwardTrigger = '<c-o>'
+let g:UltiSnipsEditSplit = 'horizontal'
+let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
-let g:ycm_key_list_select_completion=['<C-j>', '<Down>']
-let g:ycm_key_list_previous_completion=['<C-k>', '<Up>']
+" YouCompleteMe menu mapping
+let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 
 let g:mta_filetypes = {
   \ 'javascript.jsx': 1,
@@ -84,10 +91,10 @@ let g:mta_filetypes = {
   \ }
 
 " CtrlP config
-let g:ctrlp_working_path_mode = 'ca'
+let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.yardoc\|node_modules\|coverage\|lib\|log\|tmp$',
+  \ 'dir':  '\.git$\|\.yardoc\|node_modules\|dist\|coverage\|lib\|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
 
@@ -117,6 +124,8 @@ endif
   noremap <c-h> <c-w>h
   map  <C-l> :tabn<CR>
   map  <C-h> :tabp<CR>
+  map <C-a> <esc>ggVG<CR>
+  nnoremap <C-c> :call multiple_cursors#quit()<CR>
 
   " Fugitive mappings
   map <leader>gb :Gblame<CR>
