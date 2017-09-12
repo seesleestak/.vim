@@ -31,11 +31,12 @@ call plug#begin('~/.vim/plugged')
   " Core editor functionality
   Plug 'tpope/vim-surround'
   Plug 'jiangmiao/auto-pairs'
+  Plug 'alvan/vim-closetag'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'danro/rename.vim'
   Plug 'SirVer/ultisnips'
-  Plug 'Valloric/MatchTagAlways'
+  " Plug 'Valloric/MatchTagAlways'
   " Plug 'Valloric/YouCompleteMe'
 
   " File management
@@ -72,6 +73,7 @@ let mapleader = ','
 let g:jsx_ext_required = 0
 let g:airline_powerline_fonts = 1
 let g:NERDSpaceDelims = 1
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 
 let g:UltiSnipsJumpForwardTrigger = '<c-i>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-o>'
