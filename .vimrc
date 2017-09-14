@@ -12,6 +12,8 @@ set nu
 set relativenumber
 set backspace=indent,eol,start
 set mouse=n
+set cursorline
+set incsearch
 
 " Don't backup
 set nobackup
@@ -30,12 +32,15 @@ autocmd BufWritePre * %s/\s\+$//e
 call plug#begin('~/.vim/plugged')
   " Core editor functionality
   Plug 'tpope/vim-surround'
-  Plug 'jiangmiao/auto-pairs'
   Plug 'alvan/vim-closetag'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'danro/rename.vim'
   Plug 'SirVer/ultisnips'
+  Plug 'easymotion/vim-easymotion'
+  Plug 'haya14busa/incsearch.vim'
+  Plug 'haya14busa/incsearch-easymotion.vim'
+  " Plug 'jiangmiao/auto-pairs'
   " Plug 'Valloric/MatchTagAlways'
   " Plug 'Valloric/YouCompleteMe'
 
@@ -67,7 +72,7 @@ call plug#end()
 " Syntax Highlighting
 syntax on
 set termguicolors
-colorscheme ayu
+colorscheme vim-material
 
 let mapleader = ','
 let g:jsx_ext_required = 0
@@ -117,6 +122,7 @@ endif
 " Remappings
 " ----------------------------
   map <F10> :set pastetoggle<CR>
+  map gf <C-w>gf
   map <leader>q :q<CR>
   map <leader>r :Rename<space>
   noremap <leader>s :update<CR>
