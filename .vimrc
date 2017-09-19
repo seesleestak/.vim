@@ -40,6 +40,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'easymotion/vim-easymotion'
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/incsearch-easymotion.vim'
+  Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'css', 'scss', 'json'] }
   " Plug 'jiangmiao/auto-pairs'
   " Plug 'Valloric/MatchTagAlways'
   " Plug 'Valloric/YouCompleteMe'
@@ -72,7 +75,7 @@ call plug#end()
 " Syntax Highlighting
 syntax on
 set termguicolors
-colorscheme vim-material
+colorscheme ayu
 
 let mapleader = ','
 let g:jsx_ext_required = 0
