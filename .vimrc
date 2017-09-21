@@ -5,6 +5,7 @@ set softtabstop=2
 set smarttab
 set expandtab
 set laststatus=2
+set so=5
 set autoindent
 set wildmenu
 set pastetoggle=<F10>
