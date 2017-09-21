@@ -70,7 +70,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'dunckr/vim-monokai-soda'
   Plug 'baines/vim-colorscheme-thaumaturge'
   Plug 'nightsense/seabird'
+  Plug 'lifepillar/vim-solarized8'
   Plug 'ayu-theme/ayu-vim'
+  Plug 'KeitaNakamura/neodark.vim'
 call plug#end()
 
 " Syntax Highlighting
