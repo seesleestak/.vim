@@ -44,8 +44,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'css', 'scss', 'json'] }
-  " Plug 'jiangmiao/auto-pairs'
-  " Plug 'Valloric/MatchTagAlways'
   " Plug 'Valloric/YouCompleteMe'
 
   " File management
@@ -67,7 +65,7 @@ call plug#begin('~/.vim/plugged')
   " Themes
   Plug 'encody/nvim'
   Plug 'hzchirs/vim-material'
-  Plug 'dunckr/vim-monokai-soda'
+  Plug 'dunckr/vim-jordwalke/flatlandiamonokai-soda'
   Plug 'baines/vim-colorscheme-thaumaturge'
   Plug 'nightsense/seabird'
   Plug 'lifepillar/vim-solarized8'
@@ -139,7 +137,6 @@ endif
   map  <C-l> :tabn<CR>
   map  <C-h> :tabp<CR>
   map <C-a> <esc>ggVG<CR>
-  nnoremap <C-c> :call multiple_cursors#quit()<CR>
 
   " Fugitive mappings
   map <leader>gb :Gblame<CR>
