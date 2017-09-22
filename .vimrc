@@ -65,12 +65,13 @@ call plug#begin('~/.vim/plugged')
   " Themes
   Plug 'encody/nvim'
   Plug 'hzchirs/vim-material'
-  Plug 'dunckr/vim-jordwalke/flatlandiamonokai-soda'
+  Plug 'dunckr/vim-monokai-soda'
   Plug 'baines/vim-colorscheme-thaumaturge'
   Plug 'nightsense/seabird'
   Plug 'lifepillar/vim-solarized8'
   Plug 'ayu-theme/ayu-vim'
   Plug 'KeitaNakamura/neodark.vim'
+  Plug 'mhartington/oceanic-next'
 call plug#end()
 
 " Syntax Highlighting
