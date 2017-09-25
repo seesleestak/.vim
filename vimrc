@@ -1,20 +1,21 @@
+set so=6
+set backspace=indent,eol,start
+set mouse=n
+set incsearch
+set wildmenu
+
+" Line numbers
+set number
+set relativenumber
+
+" Tab
 set tabstop=2
-set autoread
 set shiftwidth=2
 set softtabstop=2
 set smarttab
 set expandtab
-set laststatus=2
-set so=5
 set autoindent
-set wildmenu
-set pastetoggle=<F10>
-set nu
-set relativenumber
-set backspace=indent,eol,start
-set mouse=n
-set cursorline
-set incsearch
+retab
 
 " Don't backup
 set nobackup
@@ -22,9 +23,6 @@ set noswapfile
 
 " System clipboard
 set clipboard=unnamed
-
-" Tabs to spaces
-retab
 
 " Remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
@@ -85,22 +83,16 @@ let g:airline_powerline_fonts = 1
 let g:NERDSpaceDelims = 1
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 
+" UltiSnips config
 let g:UltiSnipsJumpForwardTrigger = '<c-i>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-o>'
 let g:UltiSnipsEditSplit = 'horizontal'
 let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
 " YouCompleteMe menu mapping
-let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
+" let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 
-let g:mta_filetypes = {
-  \ 'javascript.jsx': 1,
-  \ 'html' : 1,
-  \ 'xhtml' : 1,
-  \ 'xml' : 1,
-  \ 'jinja' : 1,
-  \ }
 
 " CtrlP config
 let g:ctrlp_working_path_mode = 'a'
@@ -126,7 +118,6 @@ endif
 
 " Remappings
 " ----------------------------
-  map <F10> :set pastetoggle<CR>
   map gf <C-w>gf
   map <leader>q :q<CR>
   map <leader>r :Rename<space>
