@@ -76,8 +76,11 @@ colorscheme ayu
 let mapleader = ','
 let g:jsx_ext_required = 0
 let g:airline_powerline_fonts = 1
-let g:NERDSpaceDelims = 1
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
+
+" NERDTree config
+let g:NERDSpaceDelims = 1
+let g:NERDTreeQuitOnOpen = 1
 
 " UltiSnips config
 let g:UltiSnipsJumpForwardTrigger = '<c-i>'
