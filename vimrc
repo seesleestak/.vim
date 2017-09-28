@@ -39,10 +39,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'easymotion/vim-easymotion'
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/incsearch-easymotion.vim'
-  Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'css', 'scss', 'json'] }
-  " Plug 'Valloric/YouCompleteMe'
 
   " File management
   Plug 'scrooloose/nerdtree'
@@ -89,10 +85,9 @@ let g:UltiSnipsJumpBackwardTrigger = '<c-o>'
 let g:UltiSnipsEditSplit = 'horizontal'
 let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
-" YouCompleteMe menu mapping
-" let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
-
+" Ale config
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
 
 " CtrlP config
 let g:ctrlp_working_path_mode = 'a'
