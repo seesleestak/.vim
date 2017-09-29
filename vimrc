@@ -89,6 +89,10 @@ let g:UltiSnipsEditSplit = 'horizontal'
 let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
 " Ale config
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = [
+\ 'eslint'
+\]
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
 
