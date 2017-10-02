@@ -39,6 +39,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'easymotion/vim-easymotion'
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/incsearch-easymotion.vim'
+  Plug 'wakatime/vim-wakatime'
 
   " File management
   Plug 'scrooloose/nerdtree'
