@@ -125,13 +125,8 @@ endif
   map <leader>q :q<CR>
   map <leader>r :Rename<space>
   noremap <leader>s :update<CR>
-  noremap <c-j> <c-w>j
-  noremap <c-k> <c-w>k
-  noremap <c-l> <c-w>l
-  noremap <c-h> <c-w>h
   map  <C-l> :tabn<CR>
   map  <C-h> :tabp<CR>
-  map <C-a> <esc>ggVG<CR>
 
   " Fugitive mappings
   map <leader>gb :Gblame<CR>
