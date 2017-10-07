@@ -36,10 +36,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'danro/rename.vim'
   Plug 'SirVer/ultisnips'
-  Plug 'easymotion/vim-easymotion'
   Plug 'haya14busa/incsearch.vim'
-  Plug 'haya14busa/incsearch-easymotion.vim'
   Plug 'wakatime/vim-wakatime'
+  " Plug 'easymotion/vim-easymotion'
+  " Plug 'haya14busa/incsearch-easymotion.vim'
 
   " File management
   Plug 'scrooloose/nerdtree'
