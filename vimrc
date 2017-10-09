@@ -71,7 +71,9 @@ call plug#end()
 
 " Syntax Highlighting
 syntax on
-set termguicolors
+if (has("termguicolors"))
+  set termguicolors
+endif
 colorscheme ayu
 
 let mapleader = ','
