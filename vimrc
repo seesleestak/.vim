@@ -1,4 +1,5 @@
 set so=6
+set ttimeoutlen=100
 set backspace=indent,eol,start
 set mouse=n
 set incsearch
@@ -76,6 +77,10 @@ if (has("termguicolors"))
 endif
 colorscheme ayu
 
+" Change cursor in insert mode
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
 let mapleader = ','
 let g:jsx_ext_required = 0
 let g:airline_powerline_fonts = 1
@@ -101,7 +106,7 @@ let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --n
 
 " CtrlP config
 let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_by_filename = 1
+" let g:ctrlp_by_filename = 1
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|node_modules\|dist\|coverage\|lib\|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
