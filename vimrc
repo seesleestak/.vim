@@ -1,9 +1,9 @@
 set so=6
-set ttimeoutlen=100
 set backspace=indent,eol,start
 set mouse=n
 set incsearch
 set wildmenu
+set ttimeoutlen=100
 
 " Line numbers
 set number
@@ -39,8 +39,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'SirVer/ultisnips'
   Plug 'haya14busa/incsearch.vim'
   Plug 'wakatime/vim-wakatime'
-  " Plug 'easymotion/vim-easymotion'
-  " Plug 'haya14busa/incsearch-easymotion.vim'
 
   " File management
   Plug 'scrooloose/nerdtree'
@@ -59,12 +57,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
 
   " Themes
-  Plug 'encody/nvim'
   Plug 'hzchirs/vim-material'
   Plug 'dunckr/vim-monokai-soda'
   Plug 'baines/vim-colorscheme-thaumaturge'
-  Plug 'nightsense/seabird'
-  Plug 'lifepillar/vim-solarized8'
   Plug 'ayu-theme/ayu-vim'
   Plug 'KeitaNakamura/neodark.vim'
   Plug 'mhartington/oceanic-next'
@@ -77,14 +72,14 @@ if (has("termguicolors"))
 endif
 colorscheme ayu
 
-" Change cursor in insert mode
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-
 let mapleader = ','
 let g:jsx_ext_required = 0
 let g:airline_powerline_fonts = 1
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
+
+" Change cursor in insert mode
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " NERDTree config
 let g:NERDSpaceDelims = 1
@@ -106,7 +101,6 @@ let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --n
 
 " CtrlP config
 let g:ctrlp_working_path_mode = 'a'
-" let g:ctrlp_by_filename = 1
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|node_modules\|dist\|coverage\|lib\|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
