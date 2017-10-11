@@ -104,6 +104,7 @@ let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --n
 
 " CtrlP config
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|node_modules\|dist\|coverage\|lib\|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
