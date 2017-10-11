@@ -3,7 +3,10 @@ set backspace=indent,eol,start
 set mouse=n
 set incsearch
 set wildmenu
-set ttimeoutlen=100
+
+" Fixing ESC delay
+set timeoutlen=1000
+set ttimeoutlen=0
 
 " Line numbers
 set number
@@ -94,13 +97,13 @@ let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 " Ale config
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = [
-\ 'eslint'
-\]
+  \ 'eslint'
+  \]
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
 
 " CtrlP config
-let g:ctrlp_working_path_mode = 'a'
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|node_modules\|dist\|coverage\|lib\|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
