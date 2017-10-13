@@ -124,6 +124,12 @@ if has('autocmd')
   autocmd VimEnter * :call SetupCtrlP()
 endif
 
+" Billy's console log creator
+function! EasyConsoleLog()
+  let word = expand("<cword>")
+  execute "normal! oconsole.log('".word." === ', ".word.")"
+endfunction
+
 " Remappings
 " ----------------------------
   map gf <C-w>gf
@@ -144,6 +150,7 @@ endif
   map <C-n> :NERDTreeToggle<CR>
   nmap <leader>n :NERDTreeFind<CR>
 
+  nnoremap <leader>cl :call EasyConsoleLog()<CR>
   noremap <leader>f :Ack!<space>
 " ----------------------------
 
