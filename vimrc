@@ -133,6 +133,9 @@ endif
   map  <C-l> :tabn<CR>
   map  <C-h> :tabp<CR>
 
+  " Disable ex mode
+  map Q <Nop>
+
   " Fugitive mappings
   map <leader>gb :Gblame<CR>
   map <leader>gd :Gdiff<CR>
