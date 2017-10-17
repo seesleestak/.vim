@@ -46,7 +46,8 @@ call plug#begin('~/.vim/plugged')
   " File management
   Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/nerdcommenter'
-  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
   Plug 'mileszs/ack.vim'
 
   " Git
@@ -94,6 +95,9 @@ let g:UltiSnipsJumpBackwardTrigger = '<c-o>'
 let g:UltiSnipsEditSplit = 'horizontal'
 let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
+" Ack config
+let g:ackprg = 'ag --vimgrep'
+
 " Ale config
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = [
@@ -101,28 +105,6 @@ let g:ale_fixers['javascript'] = [
   \]
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
-
-" CtrlP config
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.yardoc\|node_modules\|dist\|coverage\|lib\|log\|tmp$',
-  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
-  \ }
-
-" CtrlP auto cache clearing.
-function! SetupCtrlP()
-  if exists('g:loaded_ctrlp') && g:loaded_ctrlp
-    augroup CtrlPExtension
-      autocmd!
-      autocmd FocusGained  * CtrlPClearCache
-      autocmd BufWritePost * CtrlPClearCache
-    augroup END
-  endif
-endfunction
-if has('autocmd')
-  autocmd VimEnter * :call SetupCtrlP()
-endif
 
 " Billy's console log creator
 function! EasyConsoleLog()
@@ -138,6 +120,9 @@ endfunction
   noremap <leader>s :update<CR>
   map  <C-l> :tabn<CR>
   map  <C-h> :tabp<CR>
+
+  " fzf mappings
+  nmap <leader>t :Files<CR>
 
   " Disable ex mode
   map Q <Nop>
