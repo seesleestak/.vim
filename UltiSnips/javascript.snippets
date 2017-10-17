@@ -16,8 +16,20 @@ const $1 = () => {
 
 $1.propTypes = {}
 $1.defaultProps = {}
+$1.displayName = '$1'
 
 export default $1
+endsnippet
+
+snippet con "Connect Container" b
+import { connect } 'react-redux'
+
+import $1 from '$2'
+
+const mapStateToProps = state => ({})
+const mapDispatchToProps = dispatch => ({})
+
+export default connect(mapStateToProps, mapDispatchToProps)($1)
 endsnippet
 
 snippet t "Component Test Structure" b
