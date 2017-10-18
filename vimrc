@@ -123,6 +123,7 @@ endfunction
 
   " fzf mappings
   nmap <leader>t :Files<CR>
+  nmap <leader>a :Ag<CR>
 
   " Disable ex mode
   map Q <Nop>
