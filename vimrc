@@ -48,7 +48,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdcommenter'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  Plug 'mileszs/ack.vim'
+  " Plug 'mileszs/ack.vim'
 
   " Git
   Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -124,6 +124,7 @@ endfunction
   " fzf mappings
   nmap <leader>t :Files<CR>
   nmap <leader>a :Ag<CR>
+  nmap <leader>f :Ag <C-r><C-w><CR>
 
   " Disable ex mode
   map Q <Nop>
@@ -137,7 +138,7 @@ endfunction
   nmap <leader>n :NERDTreeFind<CR>
 
   nnoremap <leader>cl :call EasyConsoleLog()<CR>
-  noremap <leader>f :Ack!<space>
+  " noremap <leader>f :Ack!<space>
 " ----------------------------
 
 filetype plugin indent on
