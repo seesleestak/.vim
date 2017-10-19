@@ -137,7 +137,7 @@ endfunction
   map <C-n> :NERDTreeToggle<CR>
   nmap <leader>n :NERDTreeFind<CR>
 
-  nnoremap <leader>log :call EasyConsoleLog()<CR>
+  nnoremap <leader>lg :call EasyConsoleLog()<CR>
   " noremap <leader>f :Ack!<space>
 " ----------------------------
 
