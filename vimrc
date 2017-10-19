@@ -2,7 +2,6 @@ set so=6
 set backspace=indent,eol,start
 set mouse=n
 set incsearch
-set wildmenu
 
 " Fixing ESC delay
 set timeoutlen=1000
@@ -48,7 +47,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdcommenter'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  " Plug 'mileszs/ack.vim'
 
   " Git
   Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -95,9 +93,6 @@ let g:UltiSnipsJumpBackwardTrigger = '<c-o>'
 let g:UltiSnipsEditSplit = 'horizontal'
 let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
-" Ack config
-let g:ackprg = 'ag --vimgrep'
-
 " Ale config
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = [
@@ -109,7 +104,7 @@ let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --n
 " Billy's console log creator
 function! EasyConsoleLog()
   let word = expand("<cword>")
-  execute "normal! oconsole.log('".word." === ', ".word.")"
+  execute "normal! oconsole.log('".word." --- ', ".word.")"
 endfunction
 
 " Remappings
@@ -138,7 +133,6 @@ endfunction
   nmap <leader>n :NERDTreeFind<CR>
 
   nnoremap <leader>lg :call EasyConsoleLog()<CR>
-  " noremap <leader>f :Ack!<space>
 " ----------------------------
 
 filetype plugin indent on
