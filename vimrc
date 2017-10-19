@@ -1,4 +1,4 @@
-set so=6
+set so=5
 set backspace=indent,eol,start
 set mouse=n
 set incsearch
