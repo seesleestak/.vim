@@ -36,7 +36,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'alvan/vim-closetag'
   Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
   Plug 'danro/rename.vim'
   Plug 'SirVer/ultisnips'
   Plug 'haya14busa/incsearch.vim'
@@ -60,10 +59,10 @@ call plug#begin('~/.vim/plugged')
 
   " Themes
   Plug 'hzchirs/vim-material'
-  Plug 'dunckr/vim-monokai-soda'
-  Plug 'baines/vim-colorscheme-thaumaturge'
   Plug 'ayu-theme/ayu-vim'
   Plug 'KeitaNakamura/neodark.vim'
+  Plug 'jordwalke/flatlandia'
+  Plug 'cdmedia/itg_flat_vim'
   Plug 'mhartington/oceanic-next'
 call plug#end()
 
@@ -115,12 +114,12 @@ endfunction
 
 " Remappings
 " ----------------------------
-  map gf <C-w>gf
-  map <leader>q :q<CR>
-  map <leader>r :Rename<space>
   noremap <leader>s :update<CR>
+  map <leader>q :q<CR>
   map  <C-l> :tabn<CR>
   map  <C-h> :tabp<CR>
+  map gf <C-w>gf
+  map <leader>r :Rename<space>
 
   " fzf mappings
   nmap <leader>t :Files<CR>
