@@ -75,25 +75,31 @@ endif
 colorscheme ayu
 
 let mapleader = ','
-let g:jsx_ext_required = 0
-let g:airline_powerline_fonts = 1
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 
 " Change cursor in insert mode
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-" NERDTree config
+" vim-jsx
+let g:jsx_ext_required = 0
+
+" Airline
+let g:airline_powerline_fonts = 1
+
+" Closetag
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
+
+" NERDTree
 let g:NERDSpaceDelims = 1
 let g:NERDTreeQuitOnOpen = 1
 
-" UltiSnips config
+" UltiSnips
 let g:UltiSnipsJumpForwardTrigger = '<c-i>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-o>'
 let g:UltiSnipsEditSplit = 'horizontal'
 let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
-" Ale config
+" Ale
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = [
   \ 'eslint'
