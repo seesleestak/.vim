@@ -28,7 +28,7 @@ set noswapfile
 set clipboard=unnamed
 
 " Remove trailing whitespace on save
-autocmd BufWritePre * %s/\s\+$//e
+" autocmd BufWritePre * %s/\s\+$//e
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
@@ -125,6 +125,7 @@ endfunction
   nmap <leader>t :Files<CR>
   nmap <leader>a :Ag<CR>
   nmap <leader>f :Ag <C-r><C-w><CR>
+  nmap <leader>gst :GFiles?<CR>
 
   " Disable ex mode
   map Q <Nop>
