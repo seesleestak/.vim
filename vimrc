@@ -91,6 +91,7 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 " NERDTree
 let g:NERDSpaceDelims = 1
 let g:NERDTreeQuitOnOpen = 1
+let NERDTreeShowHidden=1
 
 " UltiSnips
 let g:UltiSnipsJumpForwardTrigger = '<c-i>'
