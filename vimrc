@@ -71,7 +71,7 @@ syntax on
 if (has("termguicolors"))
   set termguicolors
 endif
-colorscheme ayu
+colorscheme vim-material
 
 let mapleader = ','
 
@@ -120,6 +120,7 @@ endfunction
   map  <C-h> :tabp<CR>
   map gf <C-w>gf
   map <leader>r :Rename<space>
+  nmap <leader>b :b#<CR>
 
   " fzf mappings
   nmap <leader>t :Files<CR>
