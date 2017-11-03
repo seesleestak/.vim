@@ -2,6 +2,7 @@ set so=5
 set backspace=indent,eol,start
 set mouse=n
 set incsearch
+set hlsearch
 
 " Fixing ESC delay
 set timeoutlen=1000
@@ -38,7 +39,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'danro/rename.vim'
   Plug 'SirVer/ultisnips'
-  Plug 'haya14busa/incsearch.vim'
+  Plug 'haya14busa/is.vim'
   Plug 'wakatime/vim-wakatime'
 
   " File management
