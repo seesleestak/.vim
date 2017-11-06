@@ -129,6 +129,7 @@ endfunction
   nmap <leader>a :Ag<CR>
   nmap <leader>f :Ag <C-r><C-w><CR>
   nmap <leader>gst :GFiles?<CR>
+  nmap <leader>l :Lines<CR>
 
   " Disable ex mode
   map Q <Nop>
