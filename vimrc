@@ -62,9 +62,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'hzchirs/vim-material'
   Plug 'ayu-theme/ayu-vim'
   Plug 'KeitaNakamura/neodark.vim'
-  Plug 'AlessandroYorba/Sierra'
   Plug 'whatyouhide/vim-gotham'
-  Plug 'trevordmiller/nova-vim'
   Plug 'w0ng/vim-hybrid'
   Plug 'cocopon/iceberg.vim'
   Plug 'jordwalke/flatlandia'
@@ -148,6 +146,10 @@ endfunction
   nmap <leader>n :NERDTreeFind<CR>
 
   nnoremap <leader>lg :call EasyConsoleLog()<CR>
+
+  " Completion pop up menu mappings
+  inoremap <C-j> <C-R>=pumvisible() ? "\<lt>Down>" : "\<lt>C-j>"<CR>
+  inoremap <C-k> <C-R>=pumvisible() ? "\<lt>Up>" : "\<lt>C-k>"<CR>
 " ----------------------------
 
 filetype plugin indent on
