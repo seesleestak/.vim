@@ -55,7 +55,8 @@ call plug#begin('~/.vim/plugged')
 
   " JS syntax
   Plug 'pangloss/vim-javascript'
-  Plug 'mxw/vim-jsx'
+  Plug 'neoclide/vim-jsx-improve'
+  " Plug 'mxw/vim-jsx'
   Plug 'w0rp/ale'
 
   " Themes
@@ -77,6 +78,7 @@ if (has("termguicolors"))
 endif
 colorscheme vim-material
 
+" <leader>
 let mapleader = ','
 
 " Change cursor in insert mode
