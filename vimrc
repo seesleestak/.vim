@@ -4,6 +4,8 @@ set mouse=n
 set incsearch
 set hlsearch
 
+set hidden
+
 " Fixing ESC delay
 set timeoutlen=1000
 set ttimeoutlen=0
@@ -90,14 +92,18 @@ let g:jsx_ext_required = 0
 
 " Airline
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 
 " NERDTree
-let g:NERDSpaceDelims = 1
 let g:NERDTreeQuitOnOpen = 1
 let NERDTreeShowHidden=1
+
+" NERDCommenter
+let g:NERDSpaceDelims = 1
 
 " UltiSnips
 let g:UltiSnipsJumpForwardTrigger = '<c-i>'
@@ -123,10 +129,13 @@ endfunction
 " ----------------------------
   noremap <leader>s :update<CR>
   map <leader>q :q<CR>
-  map  <C-l> :tabn<CR>
-  map  <C-h> :tabp<CR>
   map gf <C-w>gf
   map <leader>r :Rename<space>
+
+  " Buffer related mappings
+  nmap <C-l> :bnext<CR>
+  nmap <C-h> :bprevious<CR>
+  nmap <leader>bq :bp <BAR> bd #<CR>
   nmap <leader>b :b#<CR>
 
   " fzf mappings
