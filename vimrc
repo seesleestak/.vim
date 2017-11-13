@@ -65,11 +65,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'hzchirs/vim-material'
   Plug 'ayu-theme/ayu-vim'
   Plug 'KeitaNakamura/neodark.vim'
-  Plug 'whatyouhide/vim-gotham'
   Plug 'w0ng/vim-hybrid'
-  Plug 'cocopon/iceberg.vim'
-  Plug 'jordwalke/flatlandia'
-  Plug 'cdmedia/itg_flat_vim'
   Plug 'mhartington/oceanic-next'
 call plug#end()
 
