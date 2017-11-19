@@ -38,7 +38,7 @@ call plug#begin('~/.vim/plugged')
   " Core editor functionality
   Plug 'tpope/vim-surround'
   Plug 'alvan/vim-closetag'
-  Plug 'danro/rename.vim'
+  Plug 'tpope/vim-eunuch'
   Plug 'SirVer/ultisnips'
   Plug 'haya14busa/is.vim'
   Plug 'ap/vim-buftabline'
@@ -122,7 +122,11 @@ endfunction
   noremap <leader>s :update<CR>
   map <leader>q :q<CR>
   map gf <C-w>gf
+
+  " Eunuch mappings
   map <leader>r :Rename<space>
+  map <leader>d :Delete<CR>
+  map <leader>m :Move<space>
 
   " Cycle between lint errors
   nmap <S-r> :lnext<CR>
