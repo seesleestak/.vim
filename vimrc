@@ -72,7 +72,7 @@ syntax on
 if (has("termguicolors"))
   set termguicolors
 endif
-colorscheme vim-material
+colorscheme OceanicNext
 
 " <leader>
 let mapleader = ','
@@ -83,25 +83,6 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " vim-jsx
 let g:jsx_ext_required = 0
-
-" Airline
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_section_y = 0
-let g:airline_mode_map = {
-      \ '__' : '-',
-      \ 'n'  : 'N',
-      \ 'i'  : 'I',
-      \ 'R'  : 'R',
-      \ 'c'  : 'C',
-      \ 'v'  : 'V',
-      \ 'V'  : 'V',
-      \ '' : 'V',
-      \ 's'  : 'S',
-      \ 'S'  : 'S',
-      \ '' : 'S',
-      \ }
 
 " Closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
@@ -257,13 +238,13 @@ endfunction
   set statusline=
   set statusline+=%0*\ %{toupper(g:currentmode[mode()])}   " Current mode
   set statusline+=%8*\ %{GitInfo()}                        " Git Branch name
+  set statusline+=%8*\ %-3(%{FileSize()}%)                 " File size
   set statusline+=%8*\ %<%F\ %{ReadOnly()}\ %m\ %w\        " File+path
   set statusline+=%#warningmsg#
   set statusline+=%*
   set statusline+=%9*\ %=                                  " Space
   set statusline+=%{LinterStatus()}                        " Lint errors
-  set statusline+=%8*\ %-3(%{FileSize()}%)                 " File size
-  set statusline+=%0*\ %3p%%\ %l:\ %c\                     " Rownumber/total (%)
+  set statusline+=%0*\ %L\ %3p%%\ %l:\ %c\                 " Rownumber/total (%)
 " ---------------------------------------------
 
 filetype plugin indent on
