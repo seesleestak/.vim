@@ -45,7 +45,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'wakatime/vim-wakatime'
 
   " File management
-  " Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/nerdcommenter'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
@@ -107,10 +106,6 @@ let g:airline_mode_map = {
 " Closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 
-" NERDTree
-" let g:NERDTreeQuitOnOpen = 1
-" let NERDTreeShowHidden=1
-
 " NERDCommenter
 let g:NERDSpaceDelims = 1
 
@@ -148,6 +143,16 @@ endfunction
   map gf <C-w>gf
   map <leader>r :Rename<space>
 
+  " Cycle between lint errors
+  nmap <S-r> :lnext<CR>
+  nmap <S-e> :lprev<CR>
+
+  " Disable ex mode
+  map Q <Nop>
+
+  " netrw mappings
+  nmap <leader>n :Vexplore<CR>
+
   " Buffer related mappings
   nmap <C-l> :bnext<CR>
   nmap <C-h> :bprevious<CR>
@@ -160,22 +165,15 @@ endfunction
   nmap <leader>f :Ag <C-r><C-w><CR>
   nmap <leader>gst :GFiles?<CR>
 
-  " Disable ex mode
-  map Q <Nop>
-
   " Fugitive mappings
   map <leader>gb :Gblame<CR>
   map <leader>gd :Gdiff<CR>
 
-  " NERDTree mappings
-  map <C-n> :NERDTreeToggle<CR>
-  nmap <leader>n :NERDTreeFind<CR>
-
-  nnoremap <leader>lg :call EasyConsoleLog()<CR>
-
   " Completion pop up menu mappings
   inoremap <C-j> <C-R>=pumvisible() ? "\<lt>Down>" : "\<lt>C-j>"<CR>
   inoremap <C-k> <C-R>=pumvisible() ? "\<lt>Up>" : "\<lt>C-k>"<CR>
+
+  nnoremap <leader>lg :call EasyConsoleLog()<CR>
 " ----------------------------
 
 " Statusline
@@ -265,7 +263,7 @@ endfunction
   set statusline+=%9*\ %=                                  " Space
   set statusline+=%{LinterStatus()}                        " Lint errors
   set statusline+=%8*\ %-3(%{FileSize()}%)                 " File size
-  set statusline+=%0*\ %3p%%\ %l:\ %c\                 " Rownumber/total (%)
+  set statusline+=%0*\ %3p%%\ %l:\ %c\                     " Rownumber/total (%)
 " ---------------------------------------------
 
 filetype plugin indent on
