@@ -46,6 +46,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdcommenter'
 
   " File management/navigation
+  Plug 'scrooloose/nerdtree'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
 
@@ -103,18 +104,13 @@ let g:ale_fixers['javascript'] = [
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
 
-" netrw
-" let g:netrw_banner = 0
-" let g:netrw_browse_split = 0
-
 " Billy's console log creator
 function! EasyConsoleLog()
   let word = expand("<cword>")
   execute "normal! oconsole.log('".word." --- ', ".word.")"
 endfunction
 
-" Remappings
-" ----------------------------
+" Remappings -------------------------------------
   noremap <leader>s :update<CR>
   map <leader>q :q<CR>
   map gf <C-w>gf
@@ -136,6 +132,10 @@ endfunction
   nmap <C-h> :bprevious<CR>
   nmap <leader>bq :bp <BAR> bd #<CR>
 
+  " NERDTree mappings
+  map <C-n> :NERDTreeToggle<CR>
+  nmap <leader>n :NERDTreeFind<CR>
+
   " fzf mappings
   nmap <leader>t :Files<CR>
   nmap <leader>a :Ag<CR>
@@ -151,10 +151,9 @@ endfunction
   inoremap <C-k> <C-R>=pumvisible() ? "\<lt>Up>" : "\<lt>C-k>"<CR>
 
   nnoremap <leader>lg :call EasyConsoleLog()<CR>
-" ----------------------------
+" ------------------------------------------------
 
-" Statusline
-" ---------------------------------------------
+" Statusline -------------------------------------
 " Modified from https://github.com/ahmedelgabri/dotfiles/blob/c4f40c27b295ecfb7673bd29d373cab26b93379b/vim/vimrc.local#L302-L423
   let g:currentmode={
         \ 'n'  : 'N ',
@@ -241,6 +240,6 @@ endfunction
   set statusline+=%9*\ %=                                  " Space
   set statusline+=%{LinterStatus()}                        " Lint errors
   set statusline+=%0*\ %L\ %3p%%\ %l:\ %c\                 " Rownumber/total (%)
-" ---------------------------------------------
+" ------------------------------------------------
 
 filetype plugin indent on
