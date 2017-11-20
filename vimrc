@@ -43,9 +43,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'haya14busa/is.vim'
   Plug 'ap/vim-buftabline'
   Plug 'wakatime/vim-wakatime'
-
-  " File management
   Plug 'scrooloose/nerdcommenter'
+
+  " File management/navigation
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
 
@@ -63,7 +63,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'hzchirs/vim-material'
   Plug 'ayu-theme/ayu-vim'
   Plug 'KeitaNakamura/neodark.vim'
-  Plug 'w0ng/vim-hybrid'
   Plug 'mhartington/oceanic-next'
 call plug#end()
 
@@ -91,8 +90,8 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 let g:NERDSpaceDelims = 1
 
 " UltiSnips
-let g:UltiSnipsJumpForwardTrigger = '<c-i>'
-let g:UltiSnipsJumpBackwardTrigger = '<c-o>'
+let g:UltiSnipsJumpForwardTrigger = '<c-o>'
+let g:UltiSnipsJumpBackwardTrigger = '<c-i>'
 let g:UltiSnipsEditSplit = 'horizontal'
 let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
@@ -105,11 +104,8 @@ let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
 
 " netrw
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 20
+" let g:netrw_banner = 0
+" let g:netrw_browse_split = 0
 
 " Billy's console log creator
 function! EasyConsoleLog()
@@ -135,14 +131,10 @@ endfunction
   " Disable ex mode
   map Q <Nop>
 
-  " netrw mappings
-  nmap <leader>n :Vexplore<CR>
-
   " Buffer related mappings
   nmap <C-l> :bnext<CR>
   nmap <C-h> :bprevious<CR>
   nmap <leader>bq :bp <BAR> bd #<CR>
-  nmap <leader>b :b#<CR>
 
   " fzf mappings
   nmap <leader>t :Files<CR>
