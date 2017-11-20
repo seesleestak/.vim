@@ -238,7 +238,7 @@ endfunction
   set statusline+=%#warningmsg#
   set statusline+=%*
   set statusline+=%9*\ %=                                  " Space
-  set statusline+=%{LinterStatus()}                        " Lint errors
+  set statusline+=%{LinterStatus()}\                       " Lint errors
   set statusline+=%0*\ %L\ %3p%%\ %l:\ %c\                 " Rownumber/total (%)
 " ------------------------------------------------
 
