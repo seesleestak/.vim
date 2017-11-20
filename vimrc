@@ -87,6 +87,10 @@ let g:jsx_ext_required = 0
 " Closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 
+" NERDTree
+let g:NERDTreeQuitOnOpen = 1
+let NERDTreeShowHidden=1
+
 " NERDCommenter
 let g:NERDSpaceDelims = 1
 
