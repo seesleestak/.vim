@@ -95,8 +95,9 @@ let NERDTreeShowHidden=1
 let g:NERDSpaceDelims = 1
 
 " UltiSnips
-let g:UltiSnipsJumpForwardTrigger = '<c-o>'
-let g:UltiSnipsJumpBackwardTrigger = '<c-i>'
+let g:UltiSnipsExpandTrigger='<tab>'                                            
+let g:UltiSnipsJumpForwardTrigger='<tab>'                                       
+let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 let g:UltiSnipsEditSplit = 'horizontal'
 let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
