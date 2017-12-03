@@ -44,6 +44,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ap/vim-buftabline'
   Plug 'wakatime/vim-wakatime'
   Plug 'scrooloose/nerdcommenter'
+  Plug 'JamshedVesuna/vim-markdown-preview'
 
   " File management/navigation
   Plug 'scrooloose/nerdtree'
@@ -93,6 +94,9 @@ let NERDTreeShowHidden=1
 
 " NERDCommenter
 let g:NERDSpaceDelims = 1
+
+" vim-markdown-previewer
+let vim_markdown_preview_github=1
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger='<tab>'                                            
