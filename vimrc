@@ -74,8 +74,7 @@ syntax on
 if (has("termguicolors"))
   set termguicolors
 endif
-set background=dark
-colorscheme solarized8_flat
+colorscheme OceanicNext
 
 " <leader>
 let mapleader = ','
