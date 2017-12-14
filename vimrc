@@ -66,7 +66,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'ayu-theme/ayu-vim'
   Plug 'KeitaNakamura/neodark.vim'
   Plug 'seesleestak/oceanic-next'
-  Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 " Syntax Highlighting
