@@ -74,7 +74,7 @@ syntax on
 if (has("termguicolors"))
   set termguicolors
 endif
-colorscheme nord
+colorscheme OceanicNext
 
 " <leader>
 let mapleader = ','
@@ -97,13 +97,12 @@ let NERDTreeShowHidden=1
 let g:NERDSpaceDelims = 1
 
 " vim-markdown-previewer
+let vim_markdown_preview_browser='Google Chrome'
 let vim_markdown_preview_github=1
+let vim_markdown_preview_temp_file=1
+let vim_markdown_preview_toggle=2
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger='<tab>'                                            
-let g:UltiSnipsJumpForwardTrigger='<tab>'                                       
-let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
-let g:UltiSnipsEditSplit = 'horizontal'
 let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
 " Ale
