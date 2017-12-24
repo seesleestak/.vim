@@ -1,3 +1,4 @@
+:set backspace=indent,eol,start
 set mouse=n
 set incsearch
 set hlsearch
