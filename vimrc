@@ -126,6 +126,7 @@ endfunction
   noremap <leader>s :update<CR>
   map <leader>q :q<CR>
   map gf <C-w>gf
+  nmap <leader>p :let @*=expand("%:p")<CR>
 
   " Center current search result
   nnoremap n nzz
