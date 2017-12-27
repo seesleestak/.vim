@@ -1,5 +1,4 @@
-set so=5
-set backspace=indent,eol,start
+:set backspace=indent,eol,start
 set mouse=n
 set incsearch
 set hlsearch
@@ -70,6 +69,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'KeitaNakamura/neodark.vim'
   Plug 'seesleestak/oceanic-next'
   Plug 'arcticicestudio/nord-vim'
+  Plug 'kamwitsta/nordisk'
 call plug#end()
 
 " Syntax Highlighting
