@@ -30,6 +30,9 @@ set noswapfile
 " System clipboard
 set clipboard=unnamed
 
+" Only redraw once macro is done running
+set lazyredraw
+
 " Remove trailing whitespace on save
 " autocmd BufWritePre * %s/\s\+$//e
 
@@ -98,9 +101,9 @@ let g:NERDSpaceDelims = 1
 
 " vim-markdown-previewer
 let vim_markdown_preview_browser='Google Chrome'
-let vim_markdown_preview_github=1
-let vim_markdown_preview_temp_file=1
-let vim_markdown_preview_toggle=2
+let vim_markdown_preview_github=1 " use github flavored markdown
+let vim_markdown_preview_temp_file=1 " delete tmp file when done
+let vim_markdown_preview_toggle=2 " update preview on file write
 
 " UltiSnips
 let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
@@ -123,6 +126,10 @@ endfunction
   noremap <leader>s :update<CR>
   map <leader>q :q<CR>
   map gf <C-w>gf
+
+  " Center current search result
+  nnoremap n nzz
+  nnoremap N Nzz
 
   " Eunuch mappings
   map <leader>r :Rename<space>
