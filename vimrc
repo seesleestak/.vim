@@ -128,10 +128,6 @@ endfunction
   map gf <C-w>gf
   nmap <leader>p :let @*=expand("%:p")<CR>
 
-  " Center current search result
-  nnoremap n nzz
-  nnoremap N Nzz
-
   " Eunuch mappings
   map <leader>r :Rename<space>
   map <leader>d :Delete<CR>
