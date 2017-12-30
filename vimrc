@@ -1,4 +1,4 @@
-:set backspace=indent,eol,start
+set backspace=indent,eol,start
 set mouse=n
 set incsearch
 set hlsearch
@@ -40,7 +40,6 @@ call plug#begin('~/.vim/plugged')
   " Core editor functionality
   Plug 'tpope/vim-surround'
   Plug 'alvan/vim-closetag'
-  Plug 'tpope/vim-eunuch'
   Plug 'SirVer/ultisnips'
   Plug 'haya14busa/is.vim'
   Plug 'ap/vim-buftabline'
@@ -127,15 +126,6 @@ endfunction
   map <leader>q :q<CR>
   map gf <C-w>gf
   nmap <leader>p :let @*=expand("%:p")<CR>
-
-  " Eunuch mappings
-  map <leader>r :Rename<space>
-  map <leader>d :Delete<CR>
-  map <leader>m :Move<space>
-
-  " Cycle between lint errors
-  nmap <S-r> :lnext<CR>
-  nmap <S-e> :lprev<CR>
 
   " Disable ex mode
   map Q <Nop>
