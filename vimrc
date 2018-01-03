@@ -1,8 +1,14 @@
+" Allow backspace
 set backspace=indent,eol,start
+
+" Allow scrolling
 set mouse=n
+
+" Search highlighting
 set incsearch
 set hlsearch
 
+" Hide buffers instead of closing
 set hidden
 
 " Fixing ESC delay
@@ -20,7 +26,6 @@ set softtabstop=2
 set smarttab
 set expandtab
 set autoindent
-retab
 
 " Don't backup
 set nobackup
@@ -31,9 +36,6 @@ set clipboard=unnamed
 
 " Only redraw once macro is done running
 set lazyredraw
-
-" Remove trailing whitespace on save
-" autocmd BufWritePre * %s/\s\+$//e
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
@@ -68,7 +70,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'KeitaNakamura/neodark.vim'
   Plug 'seesleestak/oceanic-next'
   Plug 'arcticicestudio/nord-vim'
-  Plug 'kamwitsta/nordisk'
 call plug#end()
 
 " Syntax Highlighting
@@ -76,7 +77,7 @@ syntax on
 if (has("termguicolors"))
   set termguicolors
 endif
-colorscheme OceanicNext
+colorscheme nord
 
 " <leader>
 let mapleader = ','
@@ -85,46 +86,42 @@ let mapleader = ','
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-" vim-jsx
-let g:jsx_ext_required = 0
+" Plugin config ----------------------------------
+  " vim-jsx
+  let g:jsx_ext_required = 0
 
-" Closetag
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
+  " Closetag
+  let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 
-" NERDTree
-let g:NERDTreeQuitOnOpen = 1
-let NERDTreeShowHidden=1
+  " NERDTree
+  let g:NERDTreeQuitOnOpen = 1
+  let NERDTreeShowHidden = 1
 
-" NERDCommenter
-let g:NERDSpaceDelims = 1
+  " NERDCommenter
+  let g:NERDSpaceDelims = 1
 
-" vim-markdown-previewer
-let vim_markdown_preview_browser='Google Chrome'
-let vim_markdown_preview_github=1 " use github flavored markdown
-let vim_markdown_preview_temp_file=1 " delete tmp file when done
-let vim_markdown_preview_toggle=2 " update preview on file write
+  " vim-markdown-previewer
+  let vim_markdown_preview_browser = 'Google Chrome'
+  let vim_markdown_preview_github = 1 " use github flavored markdown
+  let vim_markdown_preview_temp_file = 1 " delete tmp file when done
+  let vim_markdown_preview_toggle = 2 " update preview on file write
 
-" UltiSnips
-let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
+  " UltiSnips
+  let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
-" Ale
-let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = [
-  \ 'eslint'
-  \]
-let g:ale_fix_on_save = 1
-let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
-
-" Billy's console log creator
-function! EasyConsoleLog()
-  let word = expand("<cword>")
-  execute "normal! oconsole.log('".word." --- ', ".word.")"
-endfunction
+  " Ale
+  let g:ale_fixers = {}
+  let g:ale_fixers['javascript'] = [
+    \ 'eslint'
+    \]
+  let g:ale_fix_on_save = 1
+  let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
+" ------------------------------------------------
 
 " Remappings -------------------------------------
   noremap <leader>s :update<CR>
   map <leader>q :q<CR>
-  map gf <C-w>gf
+  map <leader>qa :qa!<CR>
   nmap <leader>p :let @*=expand("%:p")<CR>
 
   " Disable ex mode
@@ -244,5 +241,11 @@ endfunction
   set statusline+=%{LinterStatus()}\                       " Lint errors
   set statusline+=%0*\ %L\ %3p%%\ %l:\ %c\                 " Rownumber/total (%)
 " ------------------------------------------------
+
+" Billy's console log creator
+function! EasyConsoleLog()
+  let word = expand("<cword>")
+  execute "normal! oconsole.log('".word." --- ', ".word.")"
+endfunction
 
 filetype plugin indent on
