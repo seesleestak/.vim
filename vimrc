@@ -67,7 +67,6 @@ call plug#begin('~/.vim/plugged')
 
   " Themes
   Plug 'hzchirs/vim-material'
-  Plug 'ayu-theme/ayu-vim'
   Plug 'KeitaNakamura/neodark.vim'
   Plug 'seesleestak/oceanic-next'
   Plug 'arcticicestudio/nord-vim'
@@ -78,7 +77,7 @@ syntax on
 if (has("termguicolors"))
   set termguicolors
 endif
-colorscheme nord
+colorscheme OceanicNext
 
 " <leader>
 let mapleader = ','
