@@ -48,6 +48,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'wakatime/vim-wakatime'
   Plug 'scrooloose/nerdcommenter'
   Plug 'JamshedVesuna/vim-markdown-preview'
+  Plug 'xtal8/traces.vim'
 
   " File management/navigation
   Plug 'scrooloose/nerdtree'
