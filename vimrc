@@ -122,7 +122,6 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 " Remappings -------------------------------------
   noremap <leader>s :update<CR>
   map <leader>q :q<CR>
-  map <leader>qa :qa!<CR>
   nmap <leader>p :let @*=expand("%:p")<CR>
 
   " Disable ex mode
@@ -131,7 +130,6 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
   " Buffer related mappings
   nmap <C-l> :bnext<CR>
   nmap <C-h> :bprevious<CR>
-  nmap <leader>bq :bp <BAR> bd #<CR>
 
   " NERDTree mappings
   map <C-n> :NERDTreeToggle<CR>
@@ -140,7 +138,6 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
   " fzf mappings
   nmap <leader>t :Files<CR>
   nmap <leader>a :Ag<CR>
-  nmap <leader>f :Ag <C-r><C-w><CR>
   nmap <leader>gst :GFiles?<CR>
 
   " Fugitive mappings
