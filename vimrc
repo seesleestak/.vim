@@ -49,7 +49,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdcommenter'
   Plug 'JamshedVesuna/vim-markdown-preview'
   Plug 'xtal8/traces.vim'
-  Plug 'fcpg/vim-complimentary'
 
   " File management/navigation
   Plug 'scrooloose/nerdtree'
