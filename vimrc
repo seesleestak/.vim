@@ -113,7 +113,7 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
     \ 'eslint'
     \]
   let g:ale_fix_on_save = 1
-  let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
+  let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi --print-width 120'
 " ------------------------------------------------
 
 " Remappings -------------------------------------
