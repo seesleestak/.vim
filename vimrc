@@ -71,6 +71,7 @@ call plug#begin('~/.vim/plugged')
   " Plug 'arcticicestudio/nord-vim'
   " Plug 'ayu-theme/ayu-vim'
   " Plug 'tyrannicaltoucan/vim-quantum'
+  " Plug 'rainglow/vim'
 call plug#end()
 
 " Syntax Highlighting
