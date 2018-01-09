@@ -64,6 +64,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'neoclide/vim-jsx-improve'
   Plug 'w0rp/ale'
+  Plug 'galooshi/vim-import-js'
 
   " Themes
   Plug 'seesleestak/oceanic-next'
@@ -119,8 +120,8 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 " ------------------------------------------------
 
 " Remappings -------------------------------------
-  noremap <leader>s :update<CR>
-  map <leader>q :q<CR>
+  nnoremap <leader>s :update<CR>
+  nnoremap <leader>q :q<CR>
   nmap <leader>p :let @*=expand("%:p")<CR>
 
   " Disable ex mode
@@ -132,7 +133,7 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
   nmap <leader>bq :bp <BAR> bd #<CR>
 
   " NERDTree mappings
-  map <C-n> :NERDTreeToggle<CR>
+  nnoremap <C-n> :NERDTreeToggle<CR>
   nmap <leader>n :NERDTreeFind<CR>
 
   " fzf mappings
@@ -141,8 +142,8 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
   nmap <leader>gst :GFiles?<CR>
 
   " Fugitive mappings
-  map <leader>gb :Gblame<CR>
-  map <leader>gd :Gdiff<CR>
+  nnoremap <leader>gb :Gblame<CR>
+  nnoremap <leader>gd :Gdiff<CR>
 
   " Completion pop up menu mappings
   inoremap <C-j> <C-R>=pumvisible() ? "\<lt>Down>" : "\<lt>C-j>"<CR>
