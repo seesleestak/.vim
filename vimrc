@@ -41,12 +41,12 @@ set lazyredraw
 call plug#begin('~/.vim/plugged')
   " Core editor functionality
   Plug 'tpope/vim-surround'
+  Plug 'ap/vim-buftabline'
   Plug 'alvan/vim-closetag'
+  Plug 'scrooloose/nerdcommenter'
   Plug 'SirVer/ultisnips'
   Plug 'haya14busa/is.vim'
-  Plug 'ap/vim-buftabline'
   Plug 'wakatime/vim-wakatime'
-  Plug 'scrooloose/nerdcommenter'
   Plug 'JamshedVesuna/vim-markdown-preview'
   Plug 'xtal8/traces.vim'
 
@@ -60,10 +60,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
 
-  " JS syntax
+  " JS
   Plug 'neoclide/vim-jsx-improve'
   Plug 'w0rp/ale'
-  Plug 'galooshi/vim-import-js'
 
   " Themes
   Plug 'seesleestak/oceanic-next'
@@ -78,7 +77,6 @@ syntax on
 if (has("termguicolors"))
   set termguicolors
 endif
-" let ayucolor = 'mirage'
 colorscheme OceanicNext
 
 " <leader>
@@ -142,10 +140,6 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
   " Fugitive mappings
   nnoremap <leader>gb :Gblame<CR>
   nnoremap <leader>gd :Gdiff<CR>
-
-  " Completion pop up menu mappings
-  inoremap <C-j> <C-R>=pumvisible() ? "\<lt>Down>" : "\<lt>C-j>"<CR>
-  inoremap <C-k> <C-R>=pumvisible() ? "\<lt>Up>" : "\<lt>C-k>"<CR>
 
   nnoremap <leader>lg :call EasyConsoleLog()<CR>
 " ------------------------------------------------
