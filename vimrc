@@ -134,7 +134,8 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
   " fzf mappings
   nmap <leader>t :Files<CR>
-  nmap <leader>a :Ag<CR>
+  nmap <leader>a :Ag<space>
+  nmap <leader>f :Ag <C-r><C-w><CR>
   nmap <leader>gst :GFiles?<CR>
 
   " Fugitive mappings
