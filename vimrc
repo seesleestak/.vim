@@ -100,8 +100,6 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
   " vim-markdown-previewer
   let vim_markdown_preview_browser = 'Google Chrome'
   let vim_markdown_preview_github = 1 " use github flavored markdown
-  let vim_markdown_preview_temp_file = 1 " delete tmp file when done
-  let vim_markdown_preview_toggle = 2 " update preview on file write
 
   " UltiSnips
   let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
