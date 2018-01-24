@@ -12,7 +12,7 @@ set hlsearch
 set hidden
 
 " Fixing ESC delay
-set ttimeoutlen=0
+set timeoutlen=1000 ttimeoutlen=0
 
 " Line numbers
 set number
