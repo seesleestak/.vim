@@ -12,7 +12,6 @@ set hlsearch
 set hidden
 
 " Fixing ESC delay
-set timeoutlen=1000
 set ttimeoutlen=0
 
 " Line numbers
@@ -116,25 +115,27 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 " Remappings -------------------------------------
   nnoremap <leader>s :update<CR>
   nnoremap <leader>q :q<CR>
-  nmap <leader>p :let @*=expand("%:p")<CR>
+  nnoremap <leader>p :let @*=expand("%:p")<CR>
+  nnoremap <leader>ev :e $MYVIMRC<CR>
+  nnoremap <leader>v :so $MYVIMRC<CR>
 
   " Disable ex mode
-  map Q <Nop>
+  nnoremap Q <Nop>
 
   " Buffer related mappings
-  nmap <C-l> :bnext<CR>
-  nmap <C-h> :bprevious<CR>
-  nmap <leader>bq :bp <BAR> bd #<CR>
+  nnoremap <C-l> :bnext<CR>
+  nnoremap <C-h> :bprevious<CR>
+  nnoremap <leader>bq :bp <BAR> bd #<CR>
 
   " NERDTree mappings
   nnoremap <C-n> :NERDTreeToggle<CR>
-  nmap <leader>n :NERDTreeFind<CR>
+  nnoremap <leader>n :NERDTreeFind<CR>
 
   " fzf mappings
-  nmap <leader>t :Files<CR>
-  nmap <leader>a :Ag<space>
-  nmap <leader>f :Ag <C-r><C-w><CR>
-  nmap <leader>gst :GFiles?<CR>
+  nnoremap <leader>t :Files<CR>
+  nnoremap <leader>a :Ag<space>
+  nnoremap <leader>f :Ag <C-r><C-w><CR>
+  nnoremap <leader>gst :GFiles?<CR>
 
   " Fugitive mappings
   nnoremap <leader>gb :Gblame<CR>
