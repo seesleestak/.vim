@@ -116,8 +116,8 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
   nnoremap <leader>s :update<CR>
   nnoremap <leader>q :q<CR>
   nnoremap <leader>p :let @*=expand("%:p")<CR>
-  nnoremap <leader>ev :e $MYVIMRC<CR>
-  nnoremap <leader>v :so $MYVIMRC<CR>
+  nnoremap <leader>v :e $MYVIMRC<CR>
+  nnoremap <leader>r :so $MYVIMRC<CR>
 
   " Disable ex mode
   nnoremap Q <Nop>
