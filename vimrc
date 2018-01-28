@@ -67,8 +67,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'seesleestak/oceanic-next'
   " Plug 'ayu-theme/ayu-vim'
   " Plug 'arcticicestudio/nord-vim'
-  " Plug 'tyrannicaltoucan/vim-quantum'
-  " Plug 'rainglow/vim'
 call plug#end()
 
 " Syntax Highlighting
@@ -80,10 +78,6 @@ colorscheme OceanicNext
 
 " <leader>
 let mapleader = ','
-
-" Change cursor in insert mode
-" let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-" let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " Plugin config ----------------------------------
   " Closetag
