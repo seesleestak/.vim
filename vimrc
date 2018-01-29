@@ -104,6 +104,9 @@ let mapleader = ','
   nnoremap <leader>v :e $MYVIMRC<CR>
   nnoremap <leader>r :so $MYVIMRC<CR>
 
+  " commentary mapping
+  noremap <leader>c :Commentary<CR>
+
   " Disable ex mode
   nnoremap Q <Nop>
 
