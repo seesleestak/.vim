@@ -39,23 +39,21 @@ set lazyredraw
 " vim-plug
 call plug#begin('~/.vim/plugged')
   " Core editor functionality
-  Plug 'tpope/vim-surround'
-  Plug 'ap/vim-buftabline'
-  Plug 'alvan/vim-closetag'
-  Plug 'scrooloose/nerdcommenter'
   Plug 'SirVer/ultisnips'
+  Plug 'alvan/vim-closetag'
+  Plug 'ap/vim-buftabline'
   Plug 'haya14busa/is.vim'
-  Plug 'wakatime/vim-wakatime'
-  Plug 'JamshedVesuna/vim-markdown-preview'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-eunuch'
+  Plug 'tpope/vim-surround'
   Plug 'xtal8/traces.vim'
 
   " File management/navigation
-  Plug 'scrooloose/nerdtree'
+  Plug 'jeetsukumaran/vim-filebeagle'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
 
   " Git
-  Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
 
@@ -83,17 +81,6 @@ let mapleader = ','
   " Closetag
   let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 
-  " NERDTree
-  let g:NERDTreeQuitOnOpen = 1
-  let NERDTreeShowHidden = 1
-
-  " NERDCommenter
-  let g:NERDSpaceDelims = 1
-
-  " vim-markdown-previewer
-  let vim_markdown_preview_browser = 'Google Chrome'
-  let vim_markdown_preview_github = 1 " use github flavored markdown
-
   " UltiSnips
   let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
@@ -109,7 +96,11 @@ let mapleader = ','
 " Remappings -------------------------------------
   nnoremap <leader>s :update<CR>
   nnoremap <leader>q :q<CR>
+
+  " Get file path of current buffer
   nnoremap <leader>p :let @*=expand("%:p")<CR>
+  
+  " View and source vimrc
   nnoremap <leader>v :e $MYVIMRC<CR>
   nnoremap <leader>r :so $MYVIMRC<CR>
 
@@ -120,10 +111,6 @@ let mapleader = ','
   nnoremap <C-l> :bnext<CR>
   nnoremap <C-h> :bprevious<CR>
   nnoremap <leader>bq :bp <BAR> bd #<CR>
-
-  " NERDTree mappings
-  nnoremap <C-n> :NERDTreeToggle<CR>
-  nnoremap <leader>n :NERDTreeFind<CR>
 
   " fzf mappings
   nnoremap <leader>t :Files<CR>
