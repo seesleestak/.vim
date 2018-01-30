@@ -51,7 +51,6 @@ call plug#begin('~/.vim/plugged')
   " File management/navigation
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/vimfiler.vim'
-  Plug 'jeetsukumaran/vim-filebeagle'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
 
@@ -107,8 +106,8 @@ let mapleader = ','
   nnoremap <leader>r :so $MYVIMRC<CR>
 
   " vimfiler
-  noremap <C-n> :VimFilerExplorer<CR>
-  noremap <leader>n :VimFilerBufferDir -explorer<CR>
+  noremap <C-n> :VimFilerExplorer -force-quit<CR>
+  noremap <leader>n :VimFilerBufferDir -explorer -force-quit<CR>
 
   " commentary mapping
   noremap <leader>c :Commentary<CR>
