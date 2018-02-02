@@ -64,8 +64,10 @@ call plug#begin('~/.vim/plugged')
 
   " Themes
   Plug 'seesleestak/oceanic-next'
+  Plug 'arcticicestudio/nord-vim'
+  " Plug 'KeitaNakamura/neodark.vim'
+  " Plug 'lifepillar/vim-solarized8'
   " Plug 'ayu-theme/ayu-vim'
-  " Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " Syntax Highlighting
@@ -73,7 +75,7 @@ syntax on
 if (has("termguicolors"))
   set termguicolors
 endif
-colorscheme OceanicNext
+colorscheme nord
 
 " <leader>
 let mapleader = ','
@@ -171,29 +173,6 @@ let mapleader = ','
     \)
   endfunction
 
-  " Find out current buffer's size and output it.
-  function! FileSize()
-    let bytes = getfsize(expand('%:p'))
-    if (bytes >= 1024)
-      let kbytes = bytes / 1024
-    endif
-    if (exists('kbytes') && kbytes >= 1000)
-      let mbytes = kbytes / 1000
-    endif
-
-    if bytes <= 0
-      return '0'
-    endif
-
-    if (exists('mbytes'))
-      return mbytes . 'MB '
-    elseif (exists('kbytes'))
-      return kbytes . 'KB '
-    else
-      return bytes . 'B '
-    endif
-  endfunction
-
   function! ReadOnly()
     if &readonly || !&modifiable
       return ''
@@ -213,7 +192,6 @@ let mapleader = ','
   set statusline=
   set statusline+=%0*\ %{toupper(g:currentmode[mode()])}   " Current mode
   set statusline+=%8*\ %{GitInfo()}                        " Git Branch name
-  set statusline+=%8*\ %-3(%{FileSize()}%)                 " File size
   set statusline+=%8*\ %<%F\ %{ReadOnly()}\ %m\ %w\        " File+path
   set statusline+=%#warningmsg#
   set statusline+=%*
