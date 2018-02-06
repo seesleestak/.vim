@@ -63,11 +63,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
 
   " Themes
-  Plug 'seesleestak/oceanic-next'
   Plug 'arcticicestudio/nord-vim'
+  " Plug 'seesleestak/oceanic-next'
+  " Plug 'cocopon/iceberg.vim'
   " Plug 'KeitaNakamura/neodark.vim'
-  " Plug 'lifepillar/vim-solarized8'
   " Plug 'ayu-theme/ayu-vim'
+  " Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 " Syntax Highlighting
@@ -86,6 +87,9 @@ let mapleader = ','
 
   " UltiSnips
   let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
+
+  " vimfiler
+  let g:vimfiler_as_default_explorer = 1
 
   " Ale
   let g:ale_fixers = {}
