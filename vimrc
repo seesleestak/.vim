@@ -42,7 +42,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'SirVer/ultisnips'
   Plug 'alvan/vim-closetag'
   Plug 'ap/vim-buftabline'
-  Plug 'haya14busa/is.vim'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-surround'
@@ -155,13 +154,6 @@ let mapleader = ','
     \)
   endfunction
 
-  function! ReadOnly()
-    if &readonly || !&modifiable
-      return ''
-    else
-      return ''
-  endfunction
-
   function! GitInfo()
     let git = fugitive#head()
     if git != ''
@@ -173,12 +165,12 @@ let mapleader = ','
   set laststatus=2
   set statusline=
   set statusline+=%8*\ %{GitInfo()}                        " Git Branch name
-  set statusline+=%8*\ %<%F\ %{ReadOnly()}\ %m\ %w\        " File+path
+  set statusline+=%8*\ %<%F\ %m\ %w\                       " File+path
   set statusline+=%#warningmsg#
   set statusline+=%*
   set statusline+=%9*\ %=                                  " Space
   set statusline+=%{LinterStatus()}\                       " Lint errors
-  set statusline+=%0*\ %L\ %3p%%\ %l:\ %c\                 " Rownumber/total (%)
+  set statusline+=%0*\ %L\ %3p%%\ %l:\ %c\                 " Total rows/total (%)/Row: Col
 " ------------------------------------------------
 
 " Billy's console log creator
