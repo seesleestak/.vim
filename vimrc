@@ -46,12 +46,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-surround'
   Plug 'xtal8/traces.vim'
+  " Plug 'tweekmonster/startuptime.vim'
 
   " File management/navigation
-  Plug 'Shougo/unite.vim'
-  Plug 'Shougo/vimfiler.vim'
+  Plug 'jeetsukumaran/vim-filebeagle'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
+  " Plug 'Shougo/unite.vim'
+  " Plug 'Shougo/vimfiler.vim'
 
   " Git
   Plug 'airblade/vim-gitgutter'
@@ -77,9 +79,6 @@ if (has("termguicolors"))
 endif
 colorscheme nord
 
-" <leader>
-let mapleader = ','
-
 " Plugin config ----------------------------------
   " Closetag
   let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
@@ -88,7 +87,7 @@ let mapleader = ','
   let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
   " vimfiler
-  let g:vimfiler_as_default_explorer = 1
+  " let g:vimfiler_as_default_explorer = 1
 
   " Ale
   let g:ale_fixers = {}
@@ -100,6 +99,9 @@ let mapleader = ','
 " ------------------------------------------------
 
 " Remappings -------------------------------------
+  " <leader>
+  let mapleader = ','
+
   nnoremap <leader>s :update<CR>
   nnoremap <leader>q :q<CR>
 
@@ -111,8 +113,8 @@ let mapleader = ','
   nnoremap <leader>r :so $MYVIMRC<CR>
 
   " vimfiler
-  noremap <C-n> :VimFilerExplorer -force-quit<CR>
-  noremap <leader>n :VimFilerBufferDir -explorer -force-quit<CR>
+  " noremap <C-n> :VimFilerExplorer -force-quit<CR>
+  " noremap <leader>n :VimFilerBufferDir -explorer -force-quit<CR>
 
   " commentary mapping
   noremap <leader>c :Commentary<CR>
