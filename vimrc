@@ -42,6 +42,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'SirVer/ultisnips'
   Plug 'alvan/vim-closetag'
   Plug 'ap/vim-buftabline'
+  Plug 'haya14busa/is.vim'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-surround'
@@ -115,6 +116,7 @@ colorscheme nord
   " vimfiler
   " noremap <C-n> :VimFilerExplorer -force-quit<CR>
   " noremap <leader>n :VimFilerBufferDir -explorer -force-quit<CR>
+  map <silent> <leader>f  <Plug>FileBeagleOpenCurrentWorkingDir
 
   " commentary mapping
   noremap <leader>c :Commentary<CR>
