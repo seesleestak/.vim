@@ -53,8 +53,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'jeetsukumaran/vim-filebeagle'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  " Plug 'Shougo/unite.vim'
-  " Plug 'Shougo/vimfiler.vim'
 
   " Git
   Plug 'airblade/vim-gitgutter'
@@ -87,9 +85,6 @@ colorscheme nord
   " UltiSnips
   let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
-  " vimfiler
-  " let g:vimfiler_as_default_explorer = 1
-
   " Ale
   let g:ale_fixers = {}
   let g:ale_fixers['javascript'] = [
@@ -113,9 +108,7 @@ colorscheme nord
   nnoremap <leader>v :e $MYVIMRC<CR>
   nnoremap <leader>r :so $MYVIMRC<CR>
 
-  " vimfiler
-  " noremap <C-n> :VimFilerExplorer -force-quit<CR>
-  " noremap <leader>n :VimFilerBufferDir -explorer -force-quit<CR>
+  " filebeagle mapping
   map <silent> <leader>f  <Plug>FileBeagleOpenCurrentWorkingDir
 
   " commentary mapping
