@@ -165,7 +165,7 @@ colorscheme nord
   set statusline+=%*
   set statusline+=%9*\ %=                                  " Space
   set statusline+=%{LinterStatus()}\                       " Lint errors
-  set statusline+=%0*\ %L\ %3p%%\ %l:\ %c\                 " Total rows/total (%)/Row: Col
+  set statusline+=%L\ %3p%%\ %l:\ %c\                 " Total rows/total (%)/Row: Col
 " ------------------------------------------------
 
 " Billy's console log creator
