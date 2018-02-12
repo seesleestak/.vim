@@ -65,10 +65,7 @@ call plug#begin('~/.vim/plugged')
   " Themes
   Plug 'arcticicestudio/nord-vim'
   " Plug 'seesleestak/oceanic-next'
-  " Plug 'cocopon/iceberg.vim'
-  " Plug 'KeitaNakamura/neodark.vim'
   " Plug 'ayu-theme/ayu-vim'
-  " Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 " Syntax Highlighting
@@ -91,7 +88,7 @@ colorscheme nord
     \ 'eslint'
     \]
   let g:ale_fix_on_save = 1
-  let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi --print-width 120'
+  let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
 " ------------------------------------------------
 
 " Remappings -------------------------------------
@@ -136,7 +133,8 @@ colorscheme nord
 " ------------------------------------------------
 
 " Statusline -------------------------------------
-" Modified from https://github.com/ahmedelgabri/dotfiles/blob/c4f40c27b295ecfb7673bd29d373cab26b93379b/vim/vimrc.local#L302-L423
+  " Modified from https://github.com/ahmedelgabri/dotfiles/blob/c4f40c27b295ecfb7673bd29d373cab26b93379b/vim/vimrc.local#L302-L423
+
   " Get ale lint errors
   function! LinterStatus() abort
     let l:counts = ale#statusline#Count(bufnr(''))
