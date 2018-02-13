@@ -110,6 +110,7 @@ colorscheme nord
 
   " filebeagle mapping
   map <silent> <leader>f  <Plug>FileBeagleOpenCurrentWorkingDir
+  map - :FileBeagleBufferDir<CR>
 
   " commentary mapping
   noremap <leader>c :Commentary<CR>
@@ -168,7 +169,7 @@ colorscheme nord
   set statusline+=%*
   set statusline+=%9*\ %=                                  " Space
   set statusline+=%{LinterStatus()}\                       " Lint errors
-  set statusline+=%L\ %3p%%\ %l:\ %c\                 " Total rows/total (%)/Row: Col
+  set statusline+=%3p%%\ %l,%c\                            " total (%)/Row: Col
 " ------------------------------------------------
 
 " Billy's console log creator
