@@ -81,6 +81,9 @@ colorscheme nord
 
   " UltiSnips
   let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
+  
+  " filebeagle
+  let g:filebeagle_suppress_keymaps = 1
 
   " Ale
   let g:ale_fixers = {}
