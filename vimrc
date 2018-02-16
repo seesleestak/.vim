@@ -75,6 +75,14 @@ if (has("termguicolors"))
 endif
 colorscheme nord
 
+" Create Rg command
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
 " Plugin config ----------------------------------
   " Closetag
   let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
@@ -125,8 +133,8 @@ colorscheme nord
 
   " fzf mappings
   nnoremap <leader>t :Files<CR>
-  nnoremap <leader>a :Ag<space>
-  nnoremap <leader>f :Ag <C-r><C-w><CR>
+  nnoremap <leader>a :Rg<space>
+  nnoremap <leader>f :Rg <C-r><C-w><CR>
   nnoremap <leader>gst :GFiles?<CR>
 
   " Fugitive mappings
