@@ -50,7 +50,7 @@ call plug#begin('~/.vim/plugged')
   " Plug 'tweekmonster/startuptime.vim'
 
   " File management/navigation
-  Plug 'jeetsukumaran/vim-filebeagle'
+  Plug 'justinmk/vim-dirvish'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
 
@@ -90,8 +90,9 @@ command! -bang -nargs=* Rg
   " UltiSnips
   let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
   
-  " filebeagle
-  let g:filebeagle_suppress_keymaps = 1
+  " dirvish config
+  let g:dirvish_mode = 2
+  let g:dirvish_relative_paths = 1
 
   " Ale
   let g:ale_fixers = {}
@@ -115,10 +116,6 @@ command! -bang -nargs=* Rg
   " View and source vimrc
   nnoremap <leader>v :e $MYVIMRC<CR>
   nnoremap <leader>r :so $MYVIMRC<CR>
-
-  " filebeagle mapping
-  map <silent> <leader>f  <Plug>FileBeagleOpenCurrentWorkingDir
-  map - :FileBeagleBufferDir<CR>
 
   " commentary mapping
   noremap <leader>c :Commentary<CR>
