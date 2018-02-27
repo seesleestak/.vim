@@ -47,6 +47,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-surround'
   Plug 'xtal8/traces.vim'
+  Plug 'styled-components/vim-styled-components'
   " Plug 'tweekmonster/startuptime.vim'
 
   " File management/navigation
