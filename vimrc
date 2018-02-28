@@ -64,7 +64,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
 
   " Themes
-  Plug 'arcticicestudio/nord-vim'
+  Plug 'drewtempelmeyer/palenight.vim'
+  Plug 'chriskempson/base16-vim'
+  " Plug 'arcticicestudio/nord-vim'
+  " Plug 'dikiaap/minimalist'
+  " Plug 'trevordmiller/nova-vim'
   " Plug 'seesleestak/oceanic-next'
   " Plug 'ayu-theme/ayu-vim'
 call plug#end()
@@ -74,7 +78,8 @@ syntax on
 if (has("termguicolors"))
   set termguicolors
 endif
-colorscheme nord
+let base16colorspace=256
+colorscheme palenight
 
 " Create Rg command
 command! -bang -nargs=* Rg
