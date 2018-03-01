@@ -36,7 +36,8 @@ set clipboard=unnamed
 " Only redraw once macro is done running
 set lazyredraw
 
-" vim-plug
+
+" vim-plug ---------------------------------------
 call plug#begin('~/.vim/plugged')
   " Core editor functionality
   Plug 'SirVer/ultisnips'
@@ -60,26 +61,29 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
 
   " JS
-  Plug 'neoclide/vim-jsx-improve'
+  Plug 'pangloss/vim-javascript'
+  Plug 'mxw/vim-jsx'
   Plug 'w0rp/ale'
 
   " Themes
-  Plug 'drewtempelmeyer/palenight.vim'
-  Plug 'chriskempson/base16-vim'
+  " Plug 'chriskempson/base16-vim'
+  " Plug 'drewtempelmeyer/palenight.vim'
+  " Plug 'balanceiskey/vim-palenight-custom'
+  " Plug 'kaicataldo/material.vim'
   " Plug 'arcticicestudio/nord-vim'
-  " Plug 'dikiaap/minimalist'
-  " Plug 'trevordmiller/nova-vim'
   " Plug 'seesleestak/oceanic-next'
   " Plug 'ayu-theme/ayu-vim'
 call plug#end()
+" ------------------------------------------------
+
 
 " Syntax Highlighting
 syntax on
 if (has("termguicolors"))
   set termguicolors
+  let base16colorspace=256
 endif
-let base16colorspace=256
-colorscheme palenight
+colorscheme base16-material-palenight
 
 " Create Rg command
 command! -bang -nargs=* Rg
@@ -88,6 +92,7 @@ command! -bang -nargs=* Rg
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
+
 
 " Plugin config ----------------------------------
   " Closetag
@@ -105,9 +110,8 @@ command! -bang -nargs=* Rg
   let g:ale_fixers['javascript'] = [
     \ 'eslint'
     \]
-  let g:ale_fix_on_save = 1
-  let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
 " ------------------------------------------------
+
 
 " Remappings -------------------------------------
   " <leader>
@@ -147,6 +151,7 @@ command! -bang -nargs=* Rg
   nnoremap <leader>lg :call EasyConsoleLog()<CR>
 " ------------------------------------------------
 
+
 " Statusline -------------------------------------
   " Modified from https://github.com/ahmedelgabri/dotfiles/blob/c4f40c27b295ecfb7673bd29d373cab26b93379b/vim/vimrc.local#L302-L423
 
@@ -182,6 +187,7 @@ command! -bang -nargs=* Rg
   set statusline+=%{LinterStatus()}\                       " Lint errors
   set statusline+=%3p%%\ %l,%c\                            " total (%)/Row: Col
 " ------------------------------------------------
+
 
 " Billy's console log creator
 function! EasyConsoleLog()
