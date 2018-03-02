@@ -64,15 +64,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
   Plug 'w0rp/ale'
-
-  " Themes
-  " Plug 'chriskempson/base16-vim'
-  " Plug 'drewtempelmeyer/palenight.vim'
-  " Plug 'balanceiskey/vim-palenight-custom'
-  " Plug 'kaicataldo/material.vim'
-  " Plug 'arcticicestudio/nord-vim'
-  " Plug 'seesleestak/oceanic-next'
-  " Plug 'ayu-theme/ayu-vim'
 call plug#end()
 " ------------------------------------------------
 
@@ -148,10 +139,6 @@ command! -bang -nargs=* Rg
   nnoremap <leader>a :Rg<space>
   nnoremap <leader>f :Rg <C-r><C-w><CR>
   nnoremap <leader>gst :GFiles?<CR>
-
-  " Fugitive mappings
-  nnoremap <leader>gb :Gblame<CR>
-  nnoremap <leader>gd :Gdiff<CR>
 
   nnoremap <leader>lg :call EasyConsoleLog()<CR>
 " ------------------------------------------------
