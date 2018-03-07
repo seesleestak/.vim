@@ -49,7 +49,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'xtal8/traces.vim'
   Plug 'styled-components/vim-styled-components'
-  " Plug 'tweekmonster/startuptime.vim'
 
   " File management/navigation
   Plug 'justinmk/vim-dirvish'
@@ -102,6 +101,7 @@ command! -bang -nargs=* Rg
   " Ale
   let g:ale_fixers = {}
   let g:ale_fixers['javascript'] = [
+    \ 'prettier',
     \ 'eslint'
     \]
   let g:ale_fix_on_save = 1
