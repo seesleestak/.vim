@@ -73,7 +73,7 @@ if (has("termguicolors"))
   set termguicolors
   let base16colorspace=256
 endif
-colorscheme base16-material-palenight
+colorscheme base16-oceanicnext
 
 " Create Rg command
 command! -bang -nargs=* Rg
@@ -101,11 +101,10 @@ command! -bang -nargs=* Rg
   " Ale
   let g:ale_fixers = {}
   let g:ale_fixers['javascript'] = [
-    \ 'prettier',
     \ 'eslint'
     \]
   let g:ale_fix_on_save = 1
-  let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
+  " let g:ale_javascript_prettier_options = '--single-quote --trailing-comma --no-semi'
 " ------------------------------------------------
 
 
