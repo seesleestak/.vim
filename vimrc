@@ -75,7 +75,6 @@ call plug#end()
 syntax on
 if (has("termguicolors"))
   set termguicolors
-  let base16colorspace=256
 endif
 colorscheme nord
 
@@ -101,6 +100,9 @@ command! -bang -nargs=* Rg
   " dirvish config
   let g:dirvish_mode = 2
   let g:dirvish_relative_paths = 1
+
+  " nord
+  let g:nord_uniform_diff_background = 0
 
   " Ale
   let g:ale_fixers = {}
