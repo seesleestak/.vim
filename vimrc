@@ -63,6 +63,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
   Plug 'w0rp/ale'
+
+  " Themes
+  Plug 'arcticicestudio/nord-vim'
+  " Plug 'chriskempson/base16-vim'
 call plug#end()
 " ------------------------------------------------
 
@@ -73,7 +77,7 @@ if (has("termguicolors"))
   set termguicolors
   let base16colorspace=256
 endif
-colorscheme base16-oceanicnext
+colorscheme nord
 
 " Create Rg command
 command! -bang -nargs=* Rg
@@ -100,11 +104,9 @@ command! -bang -nargs=* Rg
 
   " Ale
   let g:ale_fixers = {}
-  let g:ale_fixers['javascript'] = [
-    \ 'eslint'
-    \]
+  let g:ale_fixers['javascript'] = ['eslint']
   let g:ale_fix_on_save = 1
-  " let g:ale_javascript_prettier_options = '--single-quote --trailing-comma --no-semi'
+  " let g:ale_javascript_prettier_options = '--single-quote --trailing-comma --no-semi --arrow-parens always --printWidth 120'
 " ------------------------------------------------
 
 
