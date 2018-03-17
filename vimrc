@@ -52,7 +52,7 @@ call plug#begin('~/.vim/plugged')
 
   " File management/navigation
   Plug 'justinmk/vim-dirvish'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug '/usr/local/opt/fzf' " Assumes fzf installed with homebrew
   Plug 'junegunn/fzf.vim'
 
   " Git
@@ -66,7 +66,8 @@ call plug#begin('~/.vim/plugged')
 
   " Themes
   Plug 'arcticicestudio/nord-vim'
-  " Plug 'chriskempson/base16-vim'
+  Plug 'chriskempson/base16-vim'
+  Plug 'w0ng/vim-hybrid'
 call plug#end()
 " ------------------------------------------------
 
@@ -75,9 +76,8 @@ call plug#end()
 syntax on
 if (has("termguicolors"))
   set termguicolors
-  let base16colorspace=256
 endif
-colorscheme nord
+colorscheme hybrid
 
 " Create Rg command
 command! -bang -nargs=* Rg
