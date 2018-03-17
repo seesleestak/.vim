@@ -102,6 +102,9 @@ command! -bang -nargs=* Rg
   let g:dirvish_mode = 2
   let g:dirvish_relative_paths = 1
 
+  " nord
+  let g:nord_uniform_diff_background = 0
+
   " Ale
   let g:ale_fixers = {}
   let g:ale_fixers['javascript'] = ['eslint']
