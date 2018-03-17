@@ -65,15 +65,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
 
   " Themes
-  Plug 'arcticicestudio/nord-vim'
-  Plug 'chriskempson/base16-vim'
-  Plug 'w0ng/vim-hybrid'
+  Plug 'seesleestak/vim-hybrid'
 call plug#end()
 " ------------------------------------------------
 
 
 " Syntax Highlighting
 syntax on
+
 if (has("termguicolors"))
   set termguicolors
 endif
@@ -102,8 +101,9 @@ command! -bang -nargs=* Rg
   let g:dirvish_mode = 2
   let g:dirvish_relative_paths = 1
 
-  " nord
-  let g:nord_uniform_diff_background = 0
+  " hybrid
+  let g:hybrid_custom_term_colors = 1
+  let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
 
   " Ale
   let g:ale_fixers = {}
