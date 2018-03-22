@@ -48,24 +48,26 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-surround'
   Plug 'xtal8/traces.vim'
-  Plug 'styled-components/vim-styled-components'
 
   " File management/navigation
-  Plug 'justinmk/vim-dirvish'
   Plug '/usr/local/opt/fzf' " Assumes fzf installed with homebrew
   Plug 'junegunn/fzf.vim'
+  Plug 'justinmk/vim-dirvish'
 
   " Git
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
 
   " JS
-  Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
+  Plug 'pangloss/vim-javascript'
+  Plug 'styled-components/vim-styled-components'
   Plug 'w0rp/ale'
 
   " Themes
-  Plug 'seesleestak/vim-hybrid'
+  Plug 'arcticicestudio/nord-vim'
+  Plug 'morhetz/gruvbox'
+  " Plug 'seesleestak/vim-hybrid'
 call plug#end()
 " ------------------------------------------------
 
@@ -76,7 +78,14 @@ syntax on
 if (has("termguicolors"))
   set termguicolors
 endif
-colorscheme hybrid
+
+" gruvbox
+let g:gruvbox_contrast_dark = "soft"
+
+" nord
+let g:nord_uniform_diff_background = 1
+
+colorscheme nord
 
 " Create Rg command
 command! -bang -nargs=* Rg
@@ -100,10 +109,6 @@ command! -bang -nargs=* Rg
   " dirvish config
   let g:dirvish_mode = 2
   let g:dirvish_relative_paths = 1
-
-  " hybrid
-  let g:hybrid_custom_term_colors = 1
-  let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
 
   " Ale
   let g:ale_fixers = {}
