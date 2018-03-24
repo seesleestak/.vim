@@ -18,6 +18,9 @@ set timeoutlen=1000 ttimeoutlen=0
 set number
 set relativenumber
 
+" Reload if file changes outside of vim
+set autoread
+
 " Tab
 set tabstop=2
 set shiftwidth=2
@@ -67,7 +70,6 @@ call plug#begin('~/.vim/plugged')
   " Themes
   Plug 'arcticicestudio/nord-vim'
   Plug 'morhetz/gruvbox'
-  " Plug 'seesleestak/vim-hybrid'
 call plug#end()
 " ------------------------------------------------
 
@@ -80,7 +82,7 @@ if (has("termguicolors"))
 endif
 
 " gruvbox
-let g:gruvbox_contrast_dark = "soft"
+" let g:gruvbox_contrast_dark = "soft"
 
 " nord
 let g:nord_uniform_diff_background = 1
