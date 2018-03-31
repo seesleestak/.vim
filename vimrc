@@ -1,25 +1,18 @@
-" Allow backspace
-set backspace=indent,eol,start
-
-" Allow scrolling
-set mouse=n
+set backspace=indent,eol,start " Allow backspace
+set mouse=n " Allow scrolling
+set hidden " Hide buffers instead of closing
+set timeoutlen=1000 ttimeoutlen=0 " Fixes ESC delay
+set autoread " Auto reload if file changes outside of vim
+set clipboard=unnamed " Set system clipboard register
+set lazyredraw " Only redraw once macro is done running
 
 " Search highlighting
 set incsearch
 set hlsearch
 
-" Hide buffers instead of closing
-set hidden
-
-" Fixing ESC delay
-set timeoutlen=1000 ttimeoutlen=0
-
 " Line numbers
 set number
 set relativenumber
-
-" Reload if file changes outside of vim
-set autoread
 
 " Tab
 set tabstop=2
@@ -32,13 +25,6 @@ set autoindent
 " Don't backup
 set nobackup
 set noswapfile
-
-" System clipboard
-set clipboard=unnamed
-
-" Only redraw once macro is done running
-set lazyredraw
-
 
 " vim-plug ---------------------------------------
 call plug#begin('~/.vim/plugged')
@@ -69,20 +55,11 @@ call plug#begin('~/.vim/plugged')
 
   " Themes
   Plug 'arcticicestudio/nord-vim'
-  Plug 'morhetz/gruvbox'
 call plug#end()
 " ------------------------------------------------
 
-
 " Syntax Highlighting
 syntax on
-
-if (has("termguicolors"))
-  set termguicolors
-endif
-
-" gruvbox
-" let g:gruvbox_contrast_dark = "soft"
 
 " nord
 let g:nord_uniform_diff_background = 1
@@ -96,7 +73,6 @@ command! -bang -nargs=* Rg
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
-
 
 " Plugin config ----------------------------------
   " Closetag
@@ -116,9 +92,7 @@ command! -bang -nargs=* Rg
   let g:ale_fixers = {}
   let g:ale_fixers['javascript'] = ['eslint']
   let g:ale_fix_on_save = 1
-  " let g:ale_javascript_prettier_options = '--single-quote --trailing-comma --no-semi --arrow-parens always --printWidth 120'
 " ------------------------------------------------
-
 
 " Remappings -------------------------------------
   " <leader>
@@ -130,9 +104,12 @@ command! -bang -nargs=* Rg
   " Get file path of current buffer
   nnoremap <leader>p :let @*=expand("%:p")<CR>
   
-  " View and source vimrc
+  " Open and source vimrc
   nnoremap <leader>v :e $MYVIMRC<CR>
   nnoremap <leader>r :so $MYVIMRC<CR>
+
+  " Open zshrc
+  nnoremap <leader>z :e ~/.zshrc<CR>
 
   " commentary mapping
   noremap <leader>c :Commentary<CR>
@@ -153,7 +130,6 @@ command! -bang -nargs=* Rg
 
   nnoremap <leader>lg :call EasyConsoleLog()<CR>
 " ------------------------------------------------
-
 
 " Statusline -------------------------------------
   " Modified from https://github.com/ahmedelgabri/dotfiles/blob/c4f40c27b295ecfb7673bd29d373cab26b93379b/vim/vimrc.local#L302-L423
@@ -190,7 +166,6 @@ command! -bang -nargs=* Rg
   set statusline+=%{LinterStatus()}\                       " Lint errors
   set statusline+=%3p%%\ %l,%c\                            " total (%)/Row: Col
 " ------------------------------------------------
-
 
 " Billy's console log creator
 function! EasyConsoleLog()
