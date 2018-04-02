@@ -1,10 +1,13 @@
 set backspace=indent,eol,start " Allow backspace
 set mouse=n " Allow scrolling
 set hidden " Hide buffers instead of closing
-set timeoutlen=1000 ttimeoutlen=0 " Fixes ESC delay
 set autoread " Auto reload if file changes outside of vim
 set clipboard=unnamed " Set system clipboard register
 set lazyredraw " Only redraw once macro is done running
+
+" Fixes ESC delay
+set timeoutlen=1000 
+set ttimeoutlen=0 
 
 " Search highlighting
 set incsearch
@@ -61,6 +64,10 @@ call plug#end()
 " Syntax Highlighting
 syntax on
 
+if !has('gui_running')
+  set t_Co=256
+endif
+
 " nord
 let g:nord_uniform_diff_background = 1
 
@@ -110,6 +117,9 @@ command! -bang -nargs=* Rg
 
   " Open zshrc
   nnoremap <leader>z :e ~/.zshrc<CR>
+
+  " Open .tmux.conf
+  nnoremap <leader>x :e ~/.tmux.conf<CR>
 
   " commentary mapping
   noremap <leader>c :Commentary<CR>
