@@ -116,10 +116,10 @@ command! -bang -nargs=* Rg
   nnoremap <leader>r :so $MYVIMRC<CR>
 
   " Open zshrc
-  nnoremap <leader>z :e ~/working/dotfiles/.zshrc<CR>
+  nnoremap <leader>z :e ~/dotfiles/.zshrc<CR>
 
   " Open .tmux.conf
-  nnoremap <leader>x :e ~/working/dotfiles/.tmux.conf<CR>
+  nnoremap <leader>x :e ~/dotfiles/.tmux.conf<CR>
 
   " commentary mapping
   noremap <leader>c :Commentary<CR>
