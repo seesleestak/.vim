@@ -42,7 +42,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'xtal8/traces.vim'
 
   " File management/navigation
-  Plug '/usr/local/opt/fzf' " Assumes fzf installed with homebrew
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'justinmk/vim-dirvish'
 
