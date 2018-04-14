@@ -2,7 +2,6 @@ set backspace=indent,eol,start " Allow backspace
 set mouse=n " Allow scrolling
 set hidden " Hide buffers instead of closing
 set autoread " Auto reload if file changes outside of vim
-set clipboard=unnamed " Set system clipboard register
 set lazyredraw " Only redraw once macro is done running
 
 " Fixes ESC delay
@@ -28,6 +27,15 @@ set autoindent
 " Don't backup
 set nobackup
 set noswapfile
+
+" System clipboard
+if has("clipboard")
+  set clipboard=unnamed " copy to the system clipboard
+
+  if has("unnamedplus") " X11 support
+    set clipboard+=unnamedplus
+  endif
+endif
 
 " vim-plug ---------------------------------------
 call plug#begin('~/.vim/plugged')
@@ -116,10 +124,10 @@ command! -bang -nargs=* Rg
   nnoremap <leader>r :so $MYVIMRC<CR>
 
   " Open zshrc
-  nnoremap <leader>z :e ~/dotfiles/.zshrc<CR>
+  nnoremap <leader>z :e ~/dotfiles/zsh/.zshrc<CR>
 
   " Open .tmux.conf
-  nnoremap <leader>x :e ~/dotfiles/.tmux.conf<CR>
+  nnoremap <leader>x :e ~/dotfiles/tmux/.tmux.conf<CR>
 
   " commentary mapping
   noremap <leader>c :Commentary<CR>
